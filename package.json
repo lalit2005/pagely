@@ -1,0 +1,20 @@
+{
+  "name": "clerk-nextjs-starter",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "predev": "([[ -d .vercel ]] || vercel link) && vercel env pull .env.local",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^1.13.0",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "vercel": "^23.0.1"
+  }
+}
