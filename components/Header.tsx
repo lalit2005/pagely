@@ -15,7 +15,7 @@ const Header = () => (
     <div className={styles.left}>
       <Link href="/">
         <a className={styles.logo}>
-          <Image src="/logo.svg" width="32" height="32" alt="Logo" />
+          <Image src="/logo.png" width="32" height="32" alt="Logo" />
           <span className={styles.appName}>Pagely</span>
         </a>
       </Link>

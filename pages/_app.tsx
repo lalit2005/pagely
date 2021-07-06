@@ -1,9 +1,14 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/clerk-react'
-import { useRouter } from 'next/router'
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/clerk-react";
+import { useRouter } from "next/router";
 
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 
 /**
  * List pages you want to be publicly accessible, or leave empty if
@@ -24,22 +29,19 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <ClerkProvider
       frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}
-      navigate={(to) => router.push(to)}
-    >
-      <Layout>
-        {publicPages.includes(router.pathname) ? (
-          <Component {...pageProps} />
-        ) : (
-          <>
-            <SignedIn>
-              <Component {...pageProps} />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        )}
-      </Layout>
+      navigate={(to) => router.push(to)}>
+      {publicPages.includes(router.pathname) ? (
+        <Component {...pageProps} />
+      ) : (
+        <>
+          <SignedIn>
+            <Component {...pageProps} />
+          </SignedIn>
+          <SignedOut>
+            <RedirectToSignIn />
+          </SignedOut>
+        </>
+      )}
     </ClerkProvider>
   );
 };
