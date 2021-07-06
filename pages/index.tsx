@@ -100,8 +100,7 @@ const Footer = () => (
     <a
       href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
       Powered by{" "}
       <img src="/clerk.svg" alt="Clerk.dev" className={styles.logo} />
       +
@@ -117,8 +116,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-      ></meta>
+        content="width=device-width, initial-scale=1.0"></meta>
     </Head>
     <Main />
     <Footer />

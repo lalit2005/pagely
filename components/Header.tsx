@@ -1,3 +1,4 @@
+// @ts-ignore
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const Header = () => (
       <Link href="/">
         <a className={styles.logo}>
           <Image src="/logo.svg" width="32" height="32" alt="Logo" />
-          <span className={styles.appName}>Your application</span>
+          <span className={styles.appName}>Pagely</span>
         </a>
       </Link>
     </div>
