@@ -25,3 +25,39 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.__next {
+  min-height: 100vh;
+}
+
+.cl-sign-in,
+.cl-sign-up {
+  margin-top: 2vh !important;
+  box-shadow: none !important;
+}
+
+.cl-sign-in *,
+.cl-sign-up * {
+  @apply !rounded;
+}
+
+.cl-sign-in-button,
+.cl-sign-up-button {
+  @apply max-w-sm !mx-auto !bg-gray-900 hover:opacity-80;
+}
+
+.cl-component input {
+  @apply max-w-sm !m-auto block;
+}
+.cl-field-row {
+  @apply max-w-sm !m-auto block;
+}
+
+.cl-field-row label[for="firstName"],
+.cl-field-row label[for="lastName"] {
+  @apply !relative !left-0 !right-4;
+}
+
+.cl-component label {
+  @apply !relative !left-4;
+}
