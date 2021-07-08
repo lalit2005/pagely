@@ -4,7 +4,7 @@ import Logo from "../public/logo.png";
 
 export default function Navbar() {
   return (
-    <div className="!sticky !top-0">
+    <div className="!sticky !top-0 z-50 backdrop-blur-3xl backdrop-filter">
       <div className="flex items-center justify-between py-5 mx-auto mb-10 max-w-7xl">
         <div className="max-w-[120px]">
           <Image src={Logo} alt="Pagely" />
