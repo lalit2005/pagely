@@ -65,8 +65,8 @@ export default function Page() {
                 Features
               </p>
               <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto">
-                You have the ability to customize most of your Pagely site with
-                widgets, styles and more…
+                Customize most of your Pagely site <br />
+                with widgets, styles and more…
               </p>
             </div>
 
