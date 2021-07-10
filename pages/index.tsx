@@ -1,6 +1,8 @@
+import { NotionAPI } from "notion-client";
 import Homepage from "@/components/Homepage";
 import { GetServerSideProps } from "next";
-export default function Page({ homepage, subdomain }) {
+import NotionPage from "@/components/notion/NotionPage";
+export default function Page({ homepage, subdomain, integration, recordMap }) {
   if (homepage) {
     return (
       <div>
@@ -9,12 +11,20 @@ export default function Page({ homepage, subdomain }) {
     );
   }
 
-  return <div>{subdomain}</div>;
+  if (integration === "notion") {
+    return <NotionPage recordMap={recordMap} customCss="" />;
+  }
+
+  return <div>{subdomain} not found</div>;
 }
 
 // @ts-ignore
-export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const reqUrl = req.headers.host;
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=60, stale-while-revalidate=59"
+  );
 
   if (process.env.NODE_ENV !== "production") {
     if (
@@ -28,10 +38,14 @@ export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
         },
       };
     } else if (new URL("http://" + reqUrl).origin.includes("localhost:3000")) {
+      const notion = new NotionAPI();
+      const recordMap = await notion.getPage(reqUrl.split(".")[0]);
       return {
         props: {
           homepage: false,
           subdomain: reqUrl.split(".")[0],
+          recordMap: recordMap,
+          integration: "notion",
         },
       };
     }
@@ -45,10 +59,14 @@ export const getServerSideProps: GetServerSideProps = ({ req, res }) => {
       },
     };
   } else {
+    const notion = new NotionAPI();
+    const recordMap = await notion.getPage(reqUrl.split(".")[0]);
     return {
       props: {
         homepage: false,
         subdomain: reqUrl.split(".")[0],
+        recordMap: recordMap,
+        integration: "notion",
       },
     };
   }
