@@ -12,7 +12,11 @@ export default function Page({ homepage, subdomain, integration, recordMap }) {
   }
 
   if (integration === "notion") {
-    return <NotionPage recordMap={recordMap} customCss="" />;
+    return (
+      <div>
+        <NotionPage recordMap={recordMap} customCss="" />;
+      </div>
+    );
   }
 
   return <div>{subdomain} not found</div>;
@@ -61,6 +65,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   } else {
     const notion = new NotionAPI();
     const recordMap = await notion.getPage(reqUrl.split(".")[0]);
+    // console.log(idToUuid(reqUrl.split(".")[0]));
+    // const metaData =
+    //   @ts-ignore
+    //   recordMap.block[asd].value.format.page_icon;
     return {
       props: {
         homepage: false,
