@@ -8,6 +8,9 @@ module.exports = {
         "custom-blue": "#375EF1",
       },
     },
+    fontFamily: {
+      sans: ["Inter", "monospace"],
+    },
   },
   variants: {
     extend: {},
