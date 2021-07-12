@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model notionSites {
+  id            String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  notionPageUrl String   @db.VarChar @unique
+  siteName      String   @db.VarChar
+  siteDesc      String   @db.VarChar
+  customCss     String?  @db.VarChar
+  createdAt     DateTime @default(now()) @db.Timestamp(6)
+}
