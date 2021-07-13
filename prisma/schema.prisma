@@ -9,9 +9,11 @@ datasource db {
 
 model notionSites {
   id            String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  notionPageUrl String   @db.VarChar @unique
+  notionPageUrl String   @unique @db.VarChar
   siteName      String   @db.VarChar
   siteDesc      String   @db.VarChar
   customCss     String?  @db.VarChar
   createdAt     DateTime @default(now()) @db.Timestamp(6)
+  createdBy     String   @db.VarChar
+  subdomain     String   @unique @db.VarChar
 }

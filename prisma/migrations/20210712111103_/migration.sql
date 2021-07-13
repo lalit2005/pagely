@@ -6,6 +6,7 @@ CREATE TABLE "notionSites" (
     "siteDesc" VARCHAR NOT NULL,
     "customCss" VARCHAR,
     "createdAt" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdBy" TEXT NOT NULL,
 
     PRIMARY KEY ("id")
 );

@@ -111,6 +111,12 @@
 
 .notion-hr {
   margin: 2em 0;
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: rgb(233, 233, 233);
+  height: 1px;
 }
 
 @media only screen and (max-width: 920px) {

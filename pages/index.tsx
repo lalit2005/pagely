@@ -2,7 +2,18 @@ import { NotionAPI } from "notion-client";
 import Homepage from "@/components/Homepage";
 import { GetServerSideProps } from "next";
 import NotionPage from "@/components/notion/NotionPage";
-export default function Page({ homepage, subdomain, integration, recordMap }) {
+import { PrismaClient } from "@prisma/client";
+import { parsePageId } from "notion-utils";
+import NotFoundPage from "@/components/NotFoundPage";
+
+const Page = ({
+  homepage,
+  subdomain,
+  integration,
+  recordMap,
+  customCss,
+  notFound,
+}) => {
   if (homepage) {
     return (
       <div>
@@ -11,70 +22,113 @@ export default function Page({ homepage, subdomain, integration, recordMap }) {
     );
   }
 
+  if (notFound) {
+    return <NotFoundPage />;
+  }
+
   if (integration === "notion") {
     return (
       <div>
-        <NotionPage recordMap={recordMap} customCss="" />;
+        <NotionPage recordMap={recordMap} customCss={customCss} />;
       </div>
     );
   }
 
   return <div>{subdomain} not found</div>;
-}
+};
+
+export default Page;
 
 // @ts-ignore
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const reqUrl = req.headers.host;
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=60, stale-while-revalidate=59"
-  );
+  try {
+    const reqUrl = req.headers.host;
+    res.setHeader(
+      "Cache-Control",
+      "public, s-maxage=60, stale-while-revalidate=59"
+    );
 
-  if (process.env.NODE_ENV !== "production") {
-    if (
-      new URL("http://" + reqUrl).origin.split(".")[0] ===
-      "http://localhost:3000"
-    ) {
+    if (process.env.NODE_ENV !== "production") {
+      if (
+        new URL("http://" + reqUrl).origin.split(".")[0] ===
+        "http://localhost:3000"
+      ) {
+        return {
+          props: {
+            homepage: true,
+            subdomain: false,
+          },
+        };
+      } else if (
+        new URL("http://" + reqUrl).origin.includes("localhost:3000")
+      ) {
+        const prisma = new PrismaClient();
+        const subdomain = reqUrl.split(".")[0];
+        const siteData = await prisma.notionSites.findUnique({
+          where: {
+            subdomain: subdomain,
+          },
+          select: {
+            notionPageUrl: true,
+            siteName: true,
+            siteDesc: true,
+            customCss: true,
+          },
+        });
+
+        const notion = new NotionAPI();
+        const notionPageId = parsePageId(siteData.notionPageUrl);
+        const recordMap = await notion.getPage(notionPageId);
+        return {
+          props: {
+            homepage: false,
+            subdomain: reqUrl.split(".")[0],
+            recordMap: recordMap,
+            integration: "notion",
+          },
+        };
+      }
+    }
+
+    if (new URL("https://" + reqUrl).host === "pagely.site") {
       return {
         props: {
           homepage: true,
-          subdomain: false,
+          subdomain: "",
         },
       };
-    } else if (new URL("http://" + reqUrl).origin.includes("localhost:3000")) {
+    } else {
+      const prisma = new PrismaClient();
+      const subdomain = reqUrl.split(".")[0];
+      const siteData = await prisma.notionSites.findUnique({
+        where: {
+          subdomain: subdomain,
+        },
+        select: {
+          notionPageUrl: true,
+          siteName: true,
+          siteDesc: true,
+          customCss: true,
+        },
+      });
+
       const notion = new NotionAPI();
-      const recordMap = await notion.getPage(reqUrl.split(".")[0]);
+      const notionPageId = parsePageId(siteData.notionPageUrl);
+      const recordMap = await notion.getPage(notionPageId);
       return {
         props: {
           homepage: false,
-          subdomain: reqUrl.split(".")[0],
+          subdomain: subdomain,
           recordMap: recordMap,
           integration: "notion",
+          customCss: siteData.customCss,
         },
       };
     }
-  }
-
-  if (new URL("https://" + reqUrl).host === "pagely.site") {
+  } catch (e) {
     return {
       props: {
-        homepage: true,
-        subdomain: "",
-      },
-    };
-  } else {
-    const notion = new NotionAPI();
-    const recordMap = await notion.getPage(reqUrl.split(".")[0]);
-    // console.log(idToUuid(reqUrl.split(".")[0]));
-    // const metaData =
-    //   @ts-ignore
-    //   recordMap.block[asd].value.format.page_icon;
-    return {
-      props: {
-        homepage: false,
-        subdomain: reqUrl.split(".")[0],
-        recordMap: recordMap,
-        integration: "notion",
+        notFound: true,
       },
     };
   }

@@ -5,6 +5,7 @@ import {
   SignedOut,
 } from "@clerk/clerk-react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // global styles shared across the entire site
 import "../styles/globals.css";
@@ -52,7 +53,8 @@ import Layout from "../components/Layout";
  *  "/foo/bar"       for pages/foo/bar.js
  *  "/foo/[...bar]"  for pages/foo/[...bar].js
  */
-const publicPages = ["/", "/sign-in/[[...index]]", "/sign-up/[[...index]]"];
+// const publicPages = ["/", "/sign-in/[[...index]]", "/sign-up/[[...index]]"];
+const privatePages = ["/dashboard"];
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -64,16 +66,42 @@ const MyApp = ({ Component, pageProps }) => {
     <ClerkProvider
       frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}
       navigate={(to) => router.push(to)}>
-      {publicPages.includes(router.pathname) ? (
-        <Component {...pageProps} />
-      ) : (
+      {privatePages.includes(router.pathname) ? (
         <>
+          <Head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="true"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet"
+            />
+          </Head>
           <SignedIn>
             <Component {...pageProps} />
           </SignedIn>
           <SignedOut>
             <RedirectToSignIn />
           </SignedOut>
+        </>
+      ) : (
+        <>
+          <Head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="true"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet"
+            />
+          </Head>
+          <Component {...pageProps} />
         </>
       )}
     </ClerkProvider>
