@@ -49,7 +49,7 @@ export default function Page() {
           </div>
         </div>
 
-        <Link href="/sign-up">
+        <Link href="/sign-up" passHref={true}>
           <div className="max-w-xs py-4 mx-auto my-20 text-center text-gray-100 rounded-md shadow-sm cursor-pointer focus:ring-1 focus:ring-blue-500 bg-custom-blue hover:bg-blue-600">
             <a>Get started now -{">"}</a>
           </div>

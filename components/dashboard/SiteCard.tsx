@@ -25,7 +25,8 @@ const SiteCard: React.FC<{ siteData: notionSites }> = ({ siteData }) => {
                 <div className="p-2 mt-3 border rounded-full hover:bg-gray-200">
                   <a
                     href={"https://" + subdomain + ".pagely.site"}
-                    target="_blank">
+                    target="_blank"
+                    rel="noreferrer">
                     <BiLinkExternal />
                   </a>
                 </div>
@@ -42,13 +43,13 @@ const SiteCard: React.FC<{ siteData: notionSites }> = ({ siteData }) => {
             <Tooltip.Root delayDuration={1}>
               <Tooltip.Trigger>
                 <div className="p-2 mt-3 border rounded-full hover:bg-gray-200">
-                  <a href={notionPageUrl} target="_blank">
+                  <a href={notionPageUrl} target="_blank" rel="noreferrer">
                     <SiNotion />
                   </a>
                 </div>
               </Tooltip.Trigger>
               <Tooltip.Content className="px-2 py-px text-gray-100 bg-gray-900 rounded">
-                Open {siteName}'s Notion page
+                Open {siteName}&apos;s Notion page
                 <Tooltip.Arrow />
               </Tooltip.Content>
             </Tooltip.Root>

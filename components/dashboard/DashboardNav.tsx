@@ -22,6 +22,7 @@ const DashboardNav = () => {
                 <Tooltip.Root delayDuration={1}>
                   <Tooltip.Trigger>
                     <div className="w-10 h-10">
+                      {/* eslint-disable-next-line  @next/next/no-img-element */}
                       <img
                         className="rounded-full"
                         src={profileImageUrl}

@@ -29,6 +29,7 @@ export default function Home({ recordMap, customCss }) {
     return null;
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     window.addEventListener("load", () => {
       const link = document.createElement("link");
@@ -54,6 +55,7 @@ export default function Home({ recordMap, customCss }) {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
@@ -76,6 +78,7 @@ export default function Home({ recordMap, customCss }) {
           collectionRow: CollectionRow,
           equation: Equation,
           code: Code,
+          // eslint-disable-next-line react/display-name
           pageLink: ({
             href,
             as,
