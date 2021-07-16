@@ -1,6 +1,7 @@
 import SiteCard from "@/components/dashboard/SiteCard";
 import { useClerkSWR } from "@/lib/fetcher";
 import { notionSites } from "@prisma/client";
+// @ts-ignore
 import MainLayout from "layouts/mainLayout";
 import Skeleton from "react-loading-skeleton";
 
