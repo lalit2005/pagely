@@ -9,8 +9,8 @@ import TweetDescImage from "@/public/popover-images/og-desc.png";
 import SubdomainImage from "@/public/popover-images/subdomain.png";
 import NotionImage from "@/public/popover-images/notion.png";
 import OgImage from "@/public/popover-images/og-image.png";
-// @ts-ignore
-import MainLayout from "layouts/mainLayout";
+
+import MainLayout from "@/layouts/MainLayout";
 import { NewNotionSiteFormValues } from "types/types";
 import { newNotionSiteSchemata } from "@/lib/notion/newNotionSiteSchema";
 import validateData from "@/lib/notion/validateData";

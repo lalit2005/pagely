@@ -24,9 +24,6 @@ const Page = () => {
         <div className="mt-10">
           <h2 className="mt-5 text-2xl font-medium">
             I would like to make a website with{" "}
-            {/* <span className="capitalize text-custom-blue">
-              {integration === "googleSheets" ? "Google Sheets" : integration}
-            </span> */}
             <span className="font-bold capitalize">
               <RoughNotation
                 type="box"
