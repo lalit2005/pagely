@@ -43,7 +43,7 @@
   "devDependencies": {
     "@clerk/types": "^1.6.0",
     "@types/react": "^17.0.13",
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.1",
     "eslint": "^7.30.0",
     "eslint-config-next": "^11.0.1",
     "postcss": "^8.3.5",
