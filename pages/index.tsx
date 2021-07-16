@@ -13,6 +13,10 @@ const Page = ({
   recordMap,
   customCss,
   notFound,
+  pageId,
+  siteName,
+  siteDesc,
+  ogImageUrl,
 }) => {
   if (homepage) {
     return (
@@ -29,7 +33,15 @@ const Page = ({
   if (integration === "notion") {
     return (
       <div>
-        <NotionPage recordMap={recordMap} customCss={customCss} />;
+        <NotionPage
+          recordMap={recordMap}
+          customCss={customCss}
+          pageId={pageId}
+          subdomain={subdomain}
+          ogImageUrl={ogImageUrl}
+          siteName={siteName}
+          siteDesc={siteDesc}
+        />
       </div>
     );
   }
@@ -73,6 +85,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
             siteName: true,
             siteDesc: true,
             customCss: true,
+            ogImageUrl: true,
           },
         });
 
@@ -85,6 +98,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
             subdomain: reqUrl.split(".")[0],
             recordMap: recordMap,
             integration: "notion",
+            pageId: notionPageId,
+            siteName: siteData.siteName,
+            siteDesc: siteData.siteDesc,
+            ogImageUrl: siteData.ogImageUrl,
           },
         };
       }
@@ -109,6 +126,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           siteName: true,
           siteDesc: true,
           customCss: true,
+          ogImageUrl: true,
         },
       });
 
@@ -122,6 +140,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           recordMap: recordMap,
           integration: "notion",
           customCss: siteData.customCss,
+          pageId: notionPageId,
+          siteName: siteData.siteName,
+          siteDesc: siteData.siteDesc,
+          ogImageUrl: siteData.ogImageUrl,
         },
       };
     }

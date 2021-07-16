@@ -31,7 +31,9 @@ const SiteCard: React.FC<{ siteData: notionSites }> = ({ siteData }) => {
                   </a>
                 </div>
               </Tooltip.Trigger>
-              <Tooltip.Content className="px-2 py-px text-gray-100 bg-gray-900 rounded">
+              <Tooltip.Content
+                side="top"
+                className="px-2 py-px text-gray-100 bg-gray-900 rounded">
                 {subdomain + ".pagely.site"}
                 <Tooltip.Arrow />
               </Tooltip.Content>
@@ -48,7 +50,9 @@ const SiteCard: React.FC<{ siteData: notionSites }> = ({ siteData }) => {
                   </a>
                 </div>
               </Tooltip.Trigger>
-              <Tooltip.Content className="px-2 py-px text-gray-100 bg-gray-900 rounded">
+              <Tooltip.Content
+                side="top"
+                className="px-2 py-px text-gray-100 bg-gray-900 rounded">
                 Open {siteName}&apos;s Notion page
                 <Tooltip.Arrow />
               </Tooltip.Content>

@@ -30,6 +30,8 @@ import "katex/dist/katex.min.css";
 // core styles for static tweet renderer (optional)
 // import "react-static-tweets/styles.css";
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 // global style overrides for notion
 import "../styles/notion.css";
 
@@ -55,7 +57,14 @@ import Layout from "../components/Layout";
  *  "/foo/[...bar]"  for pages/foo/[...bar].js
  */
 // const publicPages = ["/", "/sign-in/[[...index]]", "/sign-up/[[...index]]"];
-const privatePages = ["/dashboard"];
+const privatePages = [
+  "/dashboard",
+  "/new",
+  "/new/notion",
+  "/new/airtable",
+  "/new/github",
+  "/new/sheets",
+];
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();

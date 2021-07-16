@@ -16,4 +16,5 @@ model notionSites {
   createdAt     DateTime @default(now()) @db.Timestamp(6)
   createdBy     String   @db.VarChar
   subdomain     String   @unique @db.VarChar
+  ogImageUrl    String?  @db.VarChar
 }

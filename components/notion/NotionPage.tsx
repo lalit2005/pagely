@@ -8,13 +8,11 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect } from "react";
+import { NextSeo } from "next-seo";
+import { getPageTitle } from "notion-utils";
 
 const Pdf = dynamic(() =>
   import("react-notion-x").then((notion) => notion.Pdf)
-);
-
-const Equation = dynamic(() =>
-  import("react-notion-x").then((notion) => notion.Equation)
 );
 
 const Tweet = dynamic(() => import("react-tweet-embed"));
@@ -24,10 +22,21 @@ const Modal = dynamic(
   { ssr: false }
 );
 
-export default function Home({ recordMap, customCss }) {
+export default function Home({
+  recordMap,
+  customCss,
+  pageId,
+  subdomain,
+  ogImageUrl,
+  siteName,
+  siteDesc,
+}) {
   if (!recordMap) {
     return null;
   }
+
+  const title = getPageTitle(recordMap);
+  console.log("From Notion page " + title);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -39,10 +48,6 @@ export default function Home({ recordMap, customCss }) {
         pageIconEmoji.innerHTML || "⚡️"
       }</text></svg>`;
       document.getElementsByTagName("head")[0]?.appendChild(link);
-
-      const title = document?.createElement("title");
-      title.innerHTML = document.querySelector(".notion-title")?.innerHTML;
-      document.getElementsByTagName("head")[0]?.appendChild(title);
     });
   }, []);
 
@@ -67,6 +72,24 @@ export default function Home({ recordMap, customCss }) {
 				`}</style>
         <style>{customCss}</style>
       </Head>
+      <NextSeo
+        title={title}
+        description={siteDesc}
+        openGraph={{
+          title: title,
+          url: `https://${subdomain}.vercel.app`,
+          images: [
+            {
+              url: ogImageUrl,
+              alt: title,
+            },
+          ],
+          description: siteDesc,
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
       <NotionRenderer
         className="pagely-container"
         showCollectionViewDropdown={false}
@@ -76,7 +99,6 @@ export default function Home({ recordMap, customCss }) {
           tweet: Tweet,
           collection: Collection,
           collectionRow: CollectionRow,
-          equation: Equation,
           code: Code,
           // eslint-disable-next-line react/display-name
           pageLink: ({

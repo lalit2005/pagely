@@ -11,8 +11,8 @@ const DashboardNav = () => {
   const { signOut } = useClerk();
   return (
     <div>
-      <div className="!sticky !top-0 z-50 backdrop-blur-3xl backdrop-filter">
-        <div className="flex items-center justify-between py-5 mx-auto mb-10 max-w-7xl">
+      <div className="!sticky !top-0 z-50 backdrop-blur-3xl backdrop-filter px-10">
+        <div className="flex items-center justify-between max-w-5xl py-5 mx-auto mb-10">
           <div className="max-w-[120px]">
             <Image src={Logo} alt="Pagely" placeholder="blur" />
           </div>
@@ -22,15 +22,22 @@ const DashboardNav = () => {
                 <Tooltip.Root delayDuration={1}>
                   <Tooltip.Trigger>
                     <div className="w-10 h-10">
-                      {/* eslint-disable-next-line  @next/next/no-img-element */}
-                      <img
-                        className="rounded-full"
-                        src={profileImageUrl}
-                        alt={fullName}
-                      />
+                      <Link href="/dashboard">
+                        <a>
+                          {/* eslint-disable-next-line  @next/next/no-img-element */}
+                          <img
+                            className="rounded-full"
+                            src={profileImageUrl}
+                            alt={fullName}
+                          />
+                        </a>
+                      </Link>
                     </div>
                   </Tooltip.Trigger>
-                  <Tooltip.Content className="px-2 py-px text-gray-100 bg-gray-900 rounded">
+                  <Tooltip.Content
+                    side="left"
+                    sideOffset={10}
+                    className="px-2 py-px text-gray-100 bg-gray-900 rounded">
                     {fullName}
                     <Tooltip.Arrow />
                   </Tooltip.Content>
