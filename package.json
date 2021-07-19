@@ -34,7 +34,7 @@
     "react-icons": "^4.2.0",
     "react-loader-spinner": "^4.0.0",
     "react-loading-skeleton": "^2.2.0",
-    "react-notion-x": "^4.7.7",
+    "react-notion-x": "^4.7.9",
     "react-rough-notation": "^1.0.1",
     "react-tweet-embed": "^1.2.2",
     "swr": "^0.5.6",
