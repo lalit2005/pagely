@@ -3703,17 +3703,17 @@ notion-client@^4.7.6:
     notion-utils "^4.7.6"
     p-map "^4.0.0"
 
-notion-types@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/notion-types/-/notion-types-4.7.6.tgz"
-  integrity sha512-YFPDcKRpokoxK/RjP5P/+UeUbYSmt5+KlLAPPZl+MDxuzeKOqtt6NJIZfng4ji3BI/e0t/m7eA0EfAw6d2U37w==
+notion-types@^4.7.6, notion-types@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.7.9.tgz#9898a15dd705477e3568bf6f77037788382dda3e"
+  integrity sha512-G3+EeJbrXRCtlFuhfIE+ZTh3QG+3pIgpnCi4Zyxq78E9cebYfzXElbIzIwxdI7eC5NVtHSRQsQBqkyWcOAqfCg==
 
-notion-utils@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/notion-utils/-/notion-utils-4.7.6.tgz"
-  integrity sha512-sMO8jvMGoDxKHSSu2dbq9m/bWFOloQSMWPuDvzFd1+35xqxWLGFJUmCuumInryxBmUb3XQfgDItpPub0FlyQZw==
+notion-utils@^4.7.6, notion-utils@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.7.9.tgz#1cf9d1dba4c226b947459ea90f97087ea0ed6674"
+  integrity sha512-IQhelV70eaNhPhQGR2esEevgDCvbweeWCgRZ98Vnlg4IA+lk09S5Q0Cn7Ns2MFLzXssRj++kLDxzQoysvIMKBw==
   dependencies:
-    notion-types "^4.7.6"
+    notion-types "^4.7.9"
     p-queue "^6.6.1"
 
 object-assign@^4.1.1:
