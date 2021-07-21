@@ -95,7 +95,12 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.7.0", "@clerk/types@^1.6.0":
+"@clerk/types@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.npmjs.org/@clerk/types/-/types-1.5.0.tgz"
+  integrity sha512-VhSEUtPrQ07cxwd8BPBCpqEBeqIYUv6wB3gsu+VU8XowyzmMLg5yW5mgaJyCvYfL2Zjqe6eAZPHFeZnq8w1goA==
+
+"@clerk/types@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.7.0.tgz#3351f64c5d60a8db32fe29b5c591cea7725ba9e8"
   integrity sha512-BWvQ3VLylhgMmN4O8SzQm8x47Ah8b9dRWnLJtPXgQrwNsfflmECxKYE8cUloRfDcTsR4tpTcPdWQ7rxE1zdaNg==
@@ -4497,10 +4502,10 @@ react-monaco-editor@^0.43.0:
     monaco-editor "*"
     prop-types "^15.7.2"
 
-react-notion-x@^4.7.7:
-  version "4.7.7"
-  resolved "https://registry.npmjs.org/react-notion-x/-/react-notion-x-4.7.7.tgz"
-  integrity sha512-HA81KrbHQwYpgulx2VvfBzmFX+f9V4Vk2/SgBup+Claizq48i9vpFXVJm1KaSttd9Id9TMPeabKZN5TZdmJ1SA==
+react-notion-x@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/react-notion-x/-/react-notion-x-4.7.9.tgz#c61bd5ea0d9ff9a0306d8fe2cb99ce06da933a78"
+  integrity sha512-+Cb79l7qKcSSsvL65AaRoSqyNrPnSpfa3MXvUGJnFi8f6lpkuco8z3Y0LqBT/IMaz1oZjaT9eZeMuSx9nwGcpQ==
   dependencies:
     "@matejmazur/react-katex" "^3.1.3"
     date-fns "^2.15.0"
