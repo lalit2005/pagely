@@ -76,12 +76,12 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@clerk/clerk-react@^1.13.0":
-  version "1.14.0"
-  resolved "https://registry.npmjs.org/@clerk/clerk-react/-/clerk-react-1.14.0.tgz"
-  integrity sha512-rgBElF5CytC3Yu6jXAddcAwIV5DhKr3AoPkjmyavakHTxZu7gVKXLVspvnoUeqP6I2G0Ejfri2Rs9CyBbqy55w==
+"@clerk/clerk-react@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-1.15.0.tgz#6d4acc98bc814890de774d7ac0c60c5d77fd0700"
+  integrity sha512-fzfLYviRb3huHAOKNsOiVD24k9HoFANEXpZxYn3A0nww23cgDmx5/kcVRzZCi5W4qsVw4e9f3eDry7KgGyOO6Q==
   dependencies:
-    "@clerk/types" "1.5.0"
+    "@clerk/types" "1.7.0"
 
 "@clerk/clerk-sdk-node@^0.5.0":
   version "0.5.0"
