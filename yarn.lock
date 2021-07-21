@@ -182,10 +182,10 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@eslint/eslintrc@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.2.tgz"
-  integrity sha512-8nmGq/4ycLpIwzvhI4tNDmQztZ8sp+hI7cyG8i1nQDhkAbRzHpXPidRAHlNvCZQpJTKw5ItIpMw9RSToGF00mg==
+"@eslint/eslintrc@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
+  integrity sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==
   dependencies:
     ajv "^6.12.4"
     debug "^4.1.1"
@@ -304,22 +304,22 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prisma/client@2.26.0":
-  version "2.26.0"
-  resolved "https://registry.npmjs.org/@prisma/client/-/client-2.26.0.tgz"
-  integrity sha512-iwhjdUV/MEQZ7RzTEcZ/D+ewxx/pGExWJ2LypfHioJIvEMyK0saPiR0tjMvMT2I2SVzrIM5dXGhBHWi2JksWrQ==
+"@prisma/client@2.27.0":
+  version "2.27.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.27.0.tgz#17d98e64deea29063bee1778d85b5f7edeb14a26"
+  integrity sha512-Sh2b1M8MGbOHbwG1FEqdWTUCrEX3p7gt2e7gpaBWou8yTIJvP1UZ4YlHgpuUcR1q4pEIR/JTZJeQk2l4iDyRBQ==
   dependencies:
-    "@prisma/engines-version" "2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d"
+    "@prisma/engines-version" "2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb"
 
-"@prisma/engines-version@2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d":
-  version "2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d"
-  resolved "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d.tgz"
-  integrity sha512-8tygPkPxag3myF5fgNQ60zwnNSZzFf4J+DXGKykXaBLLt9W2FLkaE5sVL8/OqAGhLAnVsKj83CqPms35bKrTKw==
+"@prisma/engines-version@2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb":
+  version "2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb.tgz#60a34634fe26be9caca42556605a132e70810e3c"
+  integrity sha512-pwOsYdzw8+cwKlUrCzasiRh96RhNuJ/QcKr0HwjxxlUWTmbEayDKjqRRz5fsUYIpSv5fW1B3SsbzHOqVtFZ6XQ==
 
-"@prisma/engines@2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d":
-  version "2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d"
-  resolved "https://registry.npmjs.org/@prisma/engines/-/engines-2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d.tgz"
-  integrity sha512-a0jIhLvw9rFh6nZTr5Y3uzP28I2xNDu3pqxANvwMNnmIoYr1wYEcO1pMXn/36BGXldDdAWMmAbhfloHA3IB8DA==
+"@prisma/engines@2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb":
+  version "2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb.tgz#22084a81e90b66665aa3aacde79ef5b1bc3587fe"
+  integrity sha512-AIbIhAxmd2CHZO5XzQTPrfk+Tp/5eoNoSledOG3yc6Dk97siLvnBuSEv7prggUbedCufDwZLAvwxV4PEw3zOlQ==
 
 "@radix-ui/popper@0.0.10":
   version "0.0.10"
@@ -2275,13 +2275,13 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz"
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
-eslint@^7.30.0:
-  version "7.30.0"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-7.30.0.tgz"
-  integrity sha512-VLqz80i3as3NdloY44BQSJpFw534L9Oh+6zJOUaViV4JPd+DaHwutqP7tcpkW3YiXbK6s05RZl7yl7cQn+lijg==
+eslint@^7.31.0:
+  version "7.31.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.31.0.tgz#f972b539424bf2604907a970860732c5d99d3aca"
+  integrity sha512-vafgJpSh2ia8tnTkNUkwxGmnumgckLh5aAbLa1xRmIn9+owi8qBNGKL+B881kNKNTy7FFqTEkpNkUvmw0n6PkA==
   dependencies:
     "@babel/code-frame" "7.12.11"
-    "@eslint/eslintrc" "^0.4.2"
+    "@eslint/eslintrc" "^0.4.3"
     "@humanwhocodes/config-array" "^0.5.0"
     ajv "^6.10.0"
     chalk "^4.0.0"
@@ -3727,27 +3727,27 @@ normalize-url@^6.0.1:
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
 
-notion-client@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/notion-client/-/notion-client-4.7.6.tgz"
-  integrity sha512-ILFo33xovAYWJPhkeXfa0oG+3/wAaMUuzBq0K4pKvLTWu0H3zw/d200euePf2+sQh78cm4yALCa1RRZAI9ivvA==
+notion-client@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/notion-client/-/notion-client-4.7.9.tgz#5dd031fb32b107dc50ff8a90ed64cee302052840"
+  integrity sha512-64wUu6Q2nVgFWuPFXI0JKt/ehVshFGF28hLLDoHnAZKpalgBHAhRL6+SsRr3kkR+X0Fh0BkJ3jrAsqSFIabGFQ==
   dependencies:
     got "^11.8.1"
-    notion-types "^4.7.6"
-    notion-utils "^4.7.6"
+    notion-types "^4.7.9"
+    notion-utils "^4.7.9"
     p-map "^4.0.0"
 
-notion-types@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/notion-types/-/notion-types-4.7.6.tgz"
-  integrity sha512-YFPDcKRpokoxK/RjP5P/+UeUbYSmt5+KlLAPPZl+MDxuzeKOqtt6NJIZfng4ji3BI/e0t/m7eA0EfAw6d2U37w==
+notion-types@^4.7.6, notion-types@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.7.9.tgz#9898a15dd705477e3568bf6f77037788382dda3e"
+  integrity sha512-G3+EeJbrXRCtlFuhfIE+ZTh3QG+3pIgpnCi4Zyxq78E9cebYfzXElbIzIwxdI7eC5NVtHSRQsQBqkyWcOAqfCg==
 
-notion-utils@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.npmjs.org/notion-utils/-/notion-utils-4.7.6.tgz"
-  integrity sha512-sMO8jvMGoDxKHSSu2dbq9m/bWFOloQSMWPuDvzFd1+35xqxWLGFJUmCuumInryxBmUb3XQfgDItpPub0FlyQZw==
+notion-utils@^4.7.6, notion-utils@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.7.9.tgz#1cf9d1dba4c226b947459ea90f97087ea0ed6674"
+  integrity sha512-IQhelV70eaNhPhQGR2esEevgDCvbweeWCgRZ98Vnlg4IA+lk09S5Q0Cn7Ns2MFLzXssRj++kLDxzQoysvIMKBw==
   dependencies:
-    notion-types "^4.7.6"
+    notion-types "^4.7.9"
     p-queue "^6.6.1"
 
 object-assign@^4.1.1:
@@ -4167,12 +4167,12 @@ pretty-hrtime@^1.0.3:
   resolved "https://registry.npmjs.org/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
-prisma@2.26.0:
-  version "2.26.0"
-  resolved "https://registry.npmjs.org/prisma/-/prisma-2.26.0.tgz"
-  integrity sha512-MXTQlF8X9mabkdTRb9x5nF6jvo1kT85d9hqIpYjLLZy+5tlvEaCaLBj+ok8GINdfYBS7gwQERZ9MHx0tb5dCdg==
+prisma@2.27.0:
+  version "2.27.0"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-2.27.0.tgz#45fdecb9c2470c7ad602e804ffed70dfa7c46ad1"
+  integrity sha512-/3H9C+IPlJmY5KArhfKHMpxKXqcZIBZ+LjM1b5FxvLCGQkq/mRC96SpHcKcLtiYgftNAX13nvlxg+cBw9Dbe8Q==
   dependencies:
-    "@prisma/engines" "2.26.0-23.9b816b3aa13cc270074f172f30d6eda8a8ce867d"
+    "@prisma/engines" "2.27.0-43.cdba6ec525e0213cce26f8e4bb23cf556d1479bb"
 
 prismjs@^1.20.0:
   version "1.24.1"
@@ -4415,10 +4415,10 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-hook-form@^7.11.0:
-  version "7.11.0"
-  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.11.0.tgz"
-  integrity sha512-aJVvL5VV6JqUWvwx9fbrhc6La83aQAfXfqQr+TD/sWy3LPdqYBgBIHBt8WAKWzKRm3g29YV2CLfn4wkhNB9b+g==
+react-hook-form@^7.11.1:
+  version "7.11.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.11.1.tgz#936f8a14bdf02b0791c2130d7c78c49c10e6de09"
+  integrity sha512-lBt428oU03dNUF5qZy5xqEdANaH3L/ilKWQS2t8wD6zF7FypOv46kEkZmg+oHf3n2xgeGYJgbMIGtYExsfKJ8A==
 
 react-hot-toast@^2.0.0:
   version "2.0.0"
@@ -4519,8 +4519,8 @@ react-notion-x@^4.7.7:
     katex "^0.12.0"
     lodash.throttle "^4.1.1"
     medium-zoom "^1.0.6"
-    notion-types "^4.7.6"
-    notion-utils "^4.7.6"
+    notion-types "^4.7.9"
+    notion-utils "^4.7.9"
     prismjs "^1.20.0"
     rc-dropdown "^3.1.2"
     rc-menu "^8.5.2"
