@@ -95,12 +95,7 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.npmjs.org/@clerk/types/-/types-1.5.0.tgz"
-  integrity sha512-VhSEUtPrQ07cxwd8BPBCpqEBeqIYUv6wB3gsu+VU8XowyzmMLg5yW5mgaJyCvYfL2Zjqe6eAZPHFeZnq8w1goA==
-
-"@clerk/types@^1.7.0":
+"@clerk/types@1.7.0", "@clerk/types@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.7.0.tgz#3351f64c5d60a8db32fe29b5c591cea7725ba9e8"
   integrity sha512-BWvQ3VLylhgMmN4O8SzQm8x47Ah8b9dRWnLJtPXgQrwNsfflmECxKYE8cUloRfDcTsR4tpTcPdWQ7rxE1zdaNg==

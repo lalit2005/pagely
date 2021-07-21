@@ -43,7 +43,7 @@ const Page = () => {
           <TextareaAutosize
             autoFocus
             spellCheck={false}
-            className='max-w-xl w-full py-5 font-mono border text-sm min-h-[100px] border-gray-600 rounded-md shadow-sm block text-gray-500 focus: focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 p-96'
+            className='w-[70vw] py-5 font-mono border text-sm min-h-[100px] border-gray-600 rounded-md shadow-sm block text-gray-500 focus: focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
             onKeyDown={(e) => handleHotkeys(e)}
           />
           <p className='my-3 font-mono text-xl font-bold text-gray-500'>{`</style>`}</p>
