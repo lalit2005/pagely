@@ -3737,12 +3737,12 @@ notion-client@^4.7.9:
     notion-utils "^4.7.9"
     p-map "^4.0.0"
 
-notion-types@^4.7.6, notion-types@^4.7.9:
+notion-types@^4.7.9:
   version "4.7.9"
   resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.7.9.tgz#9898a15dd705477e3568bf6f77037788382dda3e"
   integrity sha512-G3+EeJbrXRCtlFuhfIE+ZTh3QG+3pIgpnCi4Zyxq78E9cebYfzXElbIzIwxdI7eC5NVtHSRQsQBqkyWcOAqfCg==
 
-notion-utils@^4.7.6, notion-utils@^4.7.9:
+notion-utils@^4.7.9:
   version "4.7.9"
   resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.7.9.tgz#1cf9d1dba4c226b947459ea90f97087ea0ed6674"
   integrity sha512-IQhelV70eaNhPhQGR2esEevgDCvbweeWCgRZ98Vnlg4IA+lk09S5Q0Cn7Ns2MFLzXssRj++kLDxzQoysvIMKBw==
@@ -4156,11 +4156,6 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
-
-prettier@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.3.2.tgz"
-  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
 
 pretty-hrtime@^1.0.3:
   version "1.0.3"
