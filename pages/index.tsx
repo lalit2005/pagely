@@ -1,10 +1,10 @@
-import { NotionAPI } from "notion-client";
-import Homepage from "@/components/Homepage";
-import { GetServerSideProps } from "next";
-import NotionPage from "@/components/notion/NotionPage";
-import { PrismaClient } from "@prisma/client";
-import { parsePageId } from "notion-utils";
-import NotFoundPage from "@/components/NotFoundPage";
+import { NotionAPI } from 'notion-client';
+import Homepage from '@/components/Homepage';
+import { GetServerSideProps } from 'next';
+import NotionPage from '@/components/notion/NotionPage';
+import { PrismaClient } from '@prisma/client';
+import { parsePageId } from 'notion-utils';
+import NotFoundPage from '@/components/NotFoundPage';
 
 const Page = ({
   homepage,
@@ -30,7 +30,7 @@ const Page = ({
     return <NotFoundPage />;
   }
 
-  if (integration === "notion") {
+  if (integration === 'notion') {
     return (
       <div>
         <NotionPage
@@ -56,14 +56,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   try {
     const reqUrl = req.headers.host;
     res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=60, stale-while-revalidate=59"
+      'Cache-Control',
+      'public, s-maxage=60, stale-while-revalidate=59'
     );
 
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV !== 'production') {
       if (
-        new URL("http://" + reqUrl).origin.split(".")[0] ===
-        "http://localhost:3000"
+        new URL('http://' + reqUrl).origin.split('.')[0] ===
+        'http://localhost:3000'
       ) {
         return {
           props: {
@@ -72,10 +72,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           },
         };
       } else if (
-        new URL("http://" + reqUrl).origin.includes("localhost:3000")
+        new URL('http://' + reqUrl).origin.includes('localhost:3000')
       ) {
         const prisma = new PrismaClient();
-        const subdomain = reqUrl.split(".")[0];
+        const subdomain = reqUrl.split('.')[0];
         const siteData = await prisma.notionSites.findUnique({
           where: {
             subdomain: subdomain,
@@ -95,9 +95,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
         return {
           props: {
             homepage: false,
-            subdomain: reqUrl.split(".")[0],
+            subdomain: reqUrl.split('.')[0],
             recordMap: recordMap,
-            integration: "notion",
+            integration: 'notion',
             pageId: notionPageId,
             siteName: siteData.siteName,
             siteDesc: siteData.siteDesc,
@@ -107,16 +107,16 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       }
     }
 
-    if (new URL("https://" + reqUrl).host === "pagely.site") {
+    if (new URL('https://' + reqUrl).host === 'pagely.site') {
       return {
         props: {
           homepage: true,
-          subdomain: "",
+          subdomain: '',
         },
       };
     } else {
       const prisma = new PrismaClient();
-      const subdomain = reqUrl.split(".")[0];
+      const subdomain = reqUrl.split('.')[0];
       const siteData = await prisma.notionSites.findUnique({
         where: {
           subdomain: subdomain,
@@ -138,7 +138,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           homepage: false,
           subdomain: subdomain,
           recordMap: recordMap,
-          integration: "notion",
+          integration: 'notion',
           customCss: siteData.customCss,
           pageId: notionPageId,
           siteName: siteData.siteName,

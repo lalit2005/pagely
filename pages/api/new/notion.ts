@@ -1,13 +1,13 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { notionSites, PrismaClient } from "@prisma/client";
-import { requireSession } from "@clerk/clerk-sdk-node";
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { notionSites } from '@prisma/client';
+import { requireSession } from '@clerk/clerk-sdk-node';
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 
-const prisma = new PrismaClient();
+import prisma from '@/utils/prisma';
 
 export default requireSession(
   async (req: NextApiRequest, res: NextApiResponse) => {
-    console.log("Yesssssss :|");
+    console.log('Yesssssss :|');
     // @ts-ignore
     const userId = req.session.userId;
     const data: notionSites = req.body;
@@ -31,17 +31,17 @@ export default requireSession(
       });
     } catch (error) {
       const e: PrismaClientKnownRequestError = error;
-      if (e.code === "P2002") {
+      if (e.code === 'P2002') {
         // @ts-ignore
-        if (e.meta.target[0] === "notionPageUrl") {
+        if (e.meta.target[0] === 'notionPageUrl') {
           res.json({
             success: false,
-            error: "Notion page url already exists",
+            error: 'Notion page url already exists',
           });
         } else {
           res.json({
             success: false,
-            error: "Subdomain already exists",
+            error: 'Subdomain already exists',
           });
         }
       } else {

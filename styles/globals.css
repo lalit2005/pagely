@@ -64,8 +64,8 @@ body {
   @apply max-w-sm !m-auto block;
 }
 
-.cl-field-row label[for="firstName"],
-.cl-field-row label[for="lastName"] {
+.cl-field-row label[for='firstName'],
+.cl-field-row label[for='lastName'] {
   @apply !relative !left-0 !right-4;
 }
 

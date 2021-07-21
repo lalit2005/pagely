@@ -76,12 +76,12 @@
 .token.variable {
   color: rgba(245, 158, 11, 1);
 }
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: rgba(31, 41, 55, 1);
 }
-.dark-mode code[class*="language-"],
-.dark-mode pre[class*="language-"] {
+.dark-mode code[class*='language-'],
+.dark-mode pre[class*='language-'] {
   color: rgba(249, 250, 251, 1);
 }
 pre::-webkit-scrollbar {
@@ -98,7 +98,7 @@ pre {
   background: none;
 }
 
-pre[class*="language-"] > code {
+pre[class*='language-'] > code {
   border-left: 0 none !important;
   box-shadow: none !important;
   background: none !important;

@@ -1,8 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "@prisma/client";
-import { requireSession } from "@clerk/clerk-sdk-node";
-
-const prisma = new PrismaClient();
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireSession } from '@clerk/clerk-sdk-node';
+import prisma from '@/utils/prisma';
 
 export default requireSession(
   async (req: NextApiRequest, res: NextApiResponse) => {

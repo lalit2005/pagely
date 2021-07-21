@@ -17,4 +17,5 @@ model notionSites {
   createdBy     String   @db.VarChar
   subdomain     String   @unique @db.VarChar
   ogImageUrl    String?  @db.VarChar
+  customHead    String?  @db.VarChar
 }
