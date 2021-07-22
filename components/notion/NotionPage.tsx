@@ -25,6 +25,7 @@ const Modal = dynamic(
 export default function Home({
   recordMap,
   customCss,
+  customHead,
   pageId,
   subdomain,
   ogImageUrl,
@@ -34,9 +35,8 @@ export default function Home({
   if (!recordMap) {
     return null;
   }
-
+  console.log(customHead);
   const title = getPageTitle(recordMap);
-  console.log('From Notion page ' + title);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -49,7 +49,8 @@ export default function Home({
       }</text></svg>`;
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
-  }, []);
+    document.head.innerHTML += customHead;
+  }, [customHead]);
 
   return (
     <div>

@@ -11,6 +11,7 @@ const Page = ({
   subdomain,
   integration,
   recordMap,
+  customHead,
   customCss,
   notFound,
   pageId,
@@ -41,6 +42,7 @@ const Page = ({
           ogImageUrl={ogImageUrl}
           siteName={siteName}
           siteDesc={siteDesc}
+          customHead={customHead}
         />
       </div>
     );
@@ -86,6 +88,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
             siteDesc: true,
             customCss: true,
             ogImageUrl: true,
+            customHead: true,
           },
         });
 
@@ -102,6 +105,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
             siteName: siteData.siteName,
             siteDesc: siteData.siteDesc,
             ogImageUrl: siteData.ogImageUrl,
+            customCss: siteData.customCss,
+            customHead: siteData.customHead,
           },
         };
       }
@@ -127,6 +132,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           siteDesc: true,
           customCss: true,
           ogImageUrl: true,
+          customHead: true,
         },
       });
 
@@ -144,6 +150,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
           siteName: siteData.siteName,
           siteDesc: siteData.siteDesc,
           ogImageUrl: siteData.ogImageUrl,
+          customHead: siteData.customHead,
         },
       };
     }
