@@ -49,8 +49,7 @@ export default function Home({
       }</text></svg>`;
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
-    document.head.innerHTML += customHead;
-  }, [customHead]);
+  }, []);
 
   return (
     <div>
@@ -72,6 +71,7 @@ export default function Home({
 					}
 				`}</style>
         <style>{customCss}</style>
+        <div dangerouslySetInnerHTML={{ __html: customHead }} />
       </Head>
       <NextSeo
         title={title}
