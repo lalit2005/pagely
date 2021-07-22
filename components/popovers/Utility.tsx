@@ -45,7 +45,7 @@ const Utility = () => {
           <h3 className='mb-3 text-xl font-bold'>Shadow generator</h3>
           <div className='flex items-center max-w-xl justify-evenly'>
             <div>
-              <div className='mt-2'>
+              <div className='mt-4'>
                 <p className='mb-1 text-sm text-gray-600'>
                   X Offset: {xOffset}px
                 </p>
@@ -60,7 +60,7 @@ const Utility = () => {
                   <Slider.Thumb className='block w-6 h-6 bg-blue-300 rounded-full shadow-sm hover:bg-blue-500' />
                 </Slider.Root>
               </div>
-              <div className='mt-2'>
+              <div className='mt-4'>
                 <p className='mb-1 text-sm text-gray-600'>
                   Y Offset: {yOffset}px
                 </p>
@@ -75,7 +75,7 @@ const Utility = () => {
                   <Slider.Thumb className='block w-6 h-6 bg-blue-300 rounded-full shadow-sm hover:bg-blue-500' />
                 </Slider.Root>
               </div>
-              <div className='mt-2'>
+              <div className='mt-4'>
                 <p className='mb-1 text-sm text-gray-600'>Blur: {blur}px</p>
                 <Slider.Root
                   defaultValue={[blur]}
@@ -88,7 +88,7 @@ const Utility = () => {
                   <Slider.Thumb className='block w-6 h-6 bg-blue-300 rounded-full shadow-sm hover:bg-blue-500' />
                 </Slider.Root>
               </div>
-              <div className='mt-2'>
+              <div className='mt-4'>
                 <p className='mb-1 text-sm text-gray-600'>Spread: {spread}px</p>
                 <Slider.Root
                   defaultValue={[spread]}

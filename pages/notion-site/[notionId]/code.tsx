@@ -8,6 +8,9 @@ import { notionSites } from '@prisma/client';
 import SidebarLayout from '@/layouts/SidebarLayout';
 import handleHotkeys from '@/lib/handleHotkeys';
 import Utility from '@/components/popovers/Utility';
+import { useEffect } from 'react';
+import axios from 'axios';
+import useUserWithSession from '@/lib/useUrlWithSession';
 
 const Page = () => {
   const router = useRouter();
@@ -15,8 +18,11 @@ const Page = () => {
     `/api/getSiteData/notion/?siteId=${router.query.notionId}`
   );
 
-  const [css, setCss] = useState<string>('// Custom CSS here...');
+  const [css, setCss] = useState<string>(data?.customCss);
+  const [head, setHead] = useState<string>(data?.customHead);
   let [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const urlWithSession = useUserWithSession('/api/updateSiteData/notion/code');
 
   function closeModal() {
     setIsOpen(false);
@@ -25,6 +31,15 @@ const Page = () => {
   function openModal() {
     setIsOpen(true);
   }
+
+  useEffect(() => {
+    window.addEventListener('keydown', (e) => {
+      if (e.metaKey && e.key === 's') {
+        e.preventDefault();
+        document.getElementById('update-custom-code-btn').click();
+      }
+    });
+  }, []);
 
   return (
     <div>
@@ -47,6 +62,8 @@ const Page = () => {
             <p className='my-3 font-mono text-xl font-bold text-gray-500'>{`<style>`}</p>
             <TextareaAutosize
               spellCheck={false}
+              value={css}
+              onChange={(e) => setCss(e.target.value)}
               className='w-[70vw] py-5 font-mono border text-sm min-h-[100px] border-gray-600 rounded-md shadow-sm block text-gray-500 focus:outline-none focus:border-gray-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-500'
               onKeyDown={(e) => handleHotkeys(e)}
             />
@@ -57,9 +74,29 @@ const Page = () => {
             <p className='my-3 font-mono text-xl font-bold text-gray-500'>{`<head>`}</p>
             <TextareaAutosize
               spellCheck={false}
+              value={head}
+              onChange={(e) => setHead(e.target.value)}
               className='w-[70vw] py-5 font-mono border text-sm min-h-[100px] border-gray-600 rounded-md shadow-sm block text-gray-500 focus:outline-none focus:border-gray-700 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-500'
             />
             <p className='my-3 font-mono text-xl font-bold text-gray-500'>{`</head>`}</p>
+            <div className='my-10'>
+              <button
+                id='update-custom-code-btn'
+                onClick={async () => {
+                  const { data: result } = await axios.post(urlWithSession, {
+                    customCss: css,
+                    customHead: head,
+                    siteId: data.id,
+                  });
+                  alert(result);
+                }}
+                className='px-2 py-1 text-gray-600 border border-gray-500 rounded shadow bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-200'>
+                Update Custom Code
+              </button>
+              <p className='mt-3 text-base text-gray-600'>
+                You can press <b>Cmd + S</b> to save the code too ✌️
+              </p>
+            </div>
           </div>
         </SidebarLayout>
         <Transition appear show={isOpen} as={Fragment}>
@@ -112,7 +149,7 @@ const Page = () => {
                     <button
                       type='button'
                       className='inline-flex justify-center px-4 py-1 text-sm font-medium text-blue-900 bg-blue-100 border border-blue-500 rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500'
-                      onClick={closeModal}>
+                      onClick={openModal}>
                       Thanks!
                     </button>
                   </div>

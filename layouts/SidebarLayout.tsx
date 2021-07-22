@@ -8,7 +8,6 @@ import { useUser, useClerk } from '@clerk/clerk-react';
 import { useClerkSWR } from '@/lib/fetcher';
 import ProfileDropdown from '@/components/popovers/ProfileDropdown';
 import DashboardNav from '@/components/dashboard/DashboardNav';
-import { useState } from 'react';
 import { HiOutlineNewspaper } from 'react-icons/hi';
 
 const SidebarLayout: React.FC<{
@@ -21,8 +20,6 @@ const SidebarLayout: React.FC<{
   const { data } = useClerkSWR<notionSites>(
     `/api/getSiteData/notion/?siteId=${router.query.notionId}`
   );
-
-  const [css, setCss] = useState<string>('// Custom CSS here...');
 
   return (
     <div>
