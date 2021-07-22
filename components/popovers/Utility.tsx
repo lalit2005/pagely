@@ -1,6 +1,6 @@
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import { HiOutlineClipboard } from 'react-icons/hi';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { useState } from 'react';
 import * as Slider from '@radix-ui/react-slider';
 
@@ -37,7 +37,6 @@ const Utility = () => {
             />
             <p className='my-2 mr-2 text-lg uppercase'>{color}</p>
             <HiOutlineClipboard className='relative w-8 h-8 top-1' />
-            <Toaster />
           </div>
         </div>
         <hr className='w-full mx-auto my-5 text-gray-200' />
