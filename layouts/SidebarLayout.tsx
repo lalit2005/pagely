@@ -29,10 +29,10 @@ const SidebarLayout: React.FC<{
       <div className='block lg:hidden'>
         <DashboardNav />
       </div>
-      <div className='fixed lg:flex'>
+      <div className='lg:flex'>
         {/* <div className='sticky top-0 overflow-y-hidden'> */}
         <div
-          style={{ position: 'fixed' }}
+          style={{ position: 'sticky' }}
           className='absolute top-0 h-screen left-0 px-10 py-5 bg-gray-50 w-[20vw] border-r hidden flex-col justify-between lg:flex'>
           <div>
             <Link href='/dashboard'>
@@ -117,9 +117,7 @@ const SidebarLayout: React.FC<{
           />
           {/* </div> */}
         </div>
-        <div className='lg:ml-[25vw] lg:mx-auto mx-10 mt-20'>
-          {props.children}
-        </div>
+        <div className='mx-10 mt-20 lg:mx-auto'>{props.children}</div>
       </div>
       {/* </MainLayout> */}
     </div>
