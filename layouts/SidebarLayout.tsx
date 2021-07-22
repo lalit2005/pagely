@@ -33,7 +33,7 @@ const SidebarLayout: React.FC<{
         {/* <div className='sticky top-0 overflow-y-hidden'> */}
         <div className='absolute top-0 h-screen left-0 px-10 py-5 bg-gray-50 w-[20vw] border-r hidden flex-col justify-between lg:flex'>
           <div>
-            <Link href={'/notion-site/' + data?.id}>
+            <Link href='/dashboard'>
               <a>
                 <small className='text-gray-700 hover:text-gray-500'>
                   {' '}
