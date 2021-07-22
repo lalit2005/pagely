@@ -11,6 +11,7 @@ import Utility from '@/components/popovers/Utility';
 import { useEffect } from 'react';
 import axios from 'axios';
 import useUserWithSession from '@/lib/useUrlWithSession';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Page = () => {
   const router = useRouter();
@@ -82,15 +83,25 @@ const Page = () => {
             <div className='my-10'>
               <button
                 id='update-custom-code-btn'
-                onClick={async () => {
-                  const { data: result } = await axios.post(urlWithSession, {
-                    customCss: css,
-                    customHead: head,
-                    siteId: data.id,
-                  });
-                  alert(result);
+                onClick={() => {
+                  setIsLoading(true);
+                  axios
+                    .post(urlWithSession, {
+                      customCss: css,
+                      customHead: head,
+                      siteId: data.id,
+                    })
+                    .then((res) => {
+                      console.log(res);
+                      setIsLoading(false);
+                      toast.success('Successfully updated site code.', {
+                        position: 'bottom-center',
+                      });
+                    });
                 }}
-                className='px-2 py-1 text-gray-600 border border-gray-500 rounded shadow bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-200'>
+                className={`px-2 py-1 text-gray-600 border border-gray-500 rounded shadow bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-200 ${
+                  isLoading && 'opacity-60 cursor-pointer pointer-events-none'
+                }`}>
                 Update Custom Code
               </button>
               <p className='mt-3 text-base text-gray-600'>
@@ -99,6 +110,7 @@ const Page = () => {
             </div>
           </div>
         </SidebarLayout>
+        <Toaster />
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as='div'

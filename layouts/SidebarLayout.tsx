@@ -114,7 +114,7 @@ const SidebarLayout: React.FC<{
           />
           {/* </div> */}
         </div>
-        <div className='mx-10 mt-20 lg:mx-auto'>{props.children}</div>
+        <div className='mx-10 mt-20'>{props.children}</div>
       </div>
       {/* </MainLayout> */}
     </div>
