@@ -33,6 +33,10 @@ export default function Home({
   }
   console.log(customHead);
   const title = getPageTitle(recordMap);
+  const ogImage =
+    ogImageUrl === ''
+      ? 'https://ogimage.glitch.me/i/' + encodeURIComponent(title)
+      : ogImageUrl;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
@@ -72,12 +76,13 @@ export default function Home({
       <NextSeo
         title={title}
         description={siteDesc}
+        canonical={'https://' + subdomain + '.pagely.site/'}
         openGraph={{
           title: title,
           url: `https://${subdomain}.vercel.app`,
           images: [
             {
-              url: ogImageUrl,
+              url: ogImage === 'https://no-og.image' ? '' : ogImage,
               alt: title,
             },
           ],

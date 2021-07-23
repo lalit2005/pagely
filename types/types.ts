@@ -5,3 +5,9 @@ export interface NewNotionSiteFormValues {
   notionPageUrl: string;
   ogImageUrl: string;
 }
+
+export interface NotionSeoSettings {
+  ogImageUrl: string;
+  siteName: string;
+  siteDesc: string;
+}

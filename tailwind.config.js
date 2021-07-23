@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         'custom-blue': '#375EF1',
+        'twitter-blue': '#1da1f2',
       },
     },
     fontFamily: {

@@ -2,9 +2,10 @@ import { NotionAPI } from 'notion-client';
 import Homepage from '@/components/Homepage';
 import { GetServerSideProps } from 'next';
 import NotionPage from '@/components/notion/NotionPage';
-import { PrismaClient } from '@prisma/client';
 import { parsePageId } from 'notion-utils';
 import NotFoundPage from '@/components/NotFoundPage';
+
+import prisma from '@/utils/prisma';
 
 const Page = ({
   homepage,
@@ -76,7 +77,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       } else if (
         new URL('http://' + reqUrl).origin.includes('localhost:3000')
       ) {
-        const prisma = new PrismaClient();
         const subdomain = reqUrl.split('.')[0];
         const siteData = await prisma.notionSites.findUnique({
           where: {
@@ -120,7 +120,6 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
         },
       };
     } else {
-      const prisma = new PrismaClient();
       const subdomain = reqUrl.split('.')[0];
       const siteData = await prisma.notionSites.findUnique({
         where: {

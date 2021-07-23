@@ -99,7 +99,7 @@ const Page = () => {
                       });
                     });
                 }}
-                className={`px-2 py-1 text-gray-600 border border-gray-500 rounded shadow bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-200 ${
+                className={`h-10 px-3 shadow-md bg-gray-800 rounded text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700 ${
                   isLoading && 'opacity-60 cursor-pointer pointer-events-none'
                 }`}>
                 Update Custom Code

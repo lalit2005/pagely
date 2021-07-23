@@ -143,7 +143,7 @@ const Notion = () => {
 
             <label className='block mt-10'>
               <span className='text-gray-700'>OG Image URL</span>
-              <InfoPopover content='This is the image that will appear in the OG cards and Twitter cards. 1200x630 is the recommended dimension for the OG image'>
+              <InfoPopover content='This is the image that will appear in the OG cards and Twitter cards. 1200x630 is the recommended dimension for the OG image. If you do not need, just set it to https://no-og.image'>
                 <Image
                   placeholder='blur'
                   src={OgImage}
@@ -152,7 +152,8 @@ const Notion = () => {
                 />
               </InfoPopover>
               <p className='mt-1 text-sm text-gray-600'>
-                This image will be used for the OG cards
+                If left blank, the OG Image will be automatically generated from
+                site name and Notion page&apos;s title!!
               </p>
               <div className='flex items-center'>
                 <input
