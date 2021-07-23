@@ -56,7 +56,7 @@ const Page = () => {
             <button
               onClick={openModal}
               className='px-2 py-1 text-green-600 border border-green-500 rounded shadow bg-green-50 hover:bg-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-200'>
-              Open utilities
+              Open styling tools
             </button>
           </div>
           <div className='mt-8'>
