@@ -11,10 +11,6 @@ import { useEffect } from 'react';
 import { NextSeo } from 'next-seo';
 import { getPageTitle } from 'notion-utils';
 
-const Pdf = dynamic(() =>
-  import('react-notion-x').then((notion) => notion.Pdf)
-);
-
 const Tweet = dynamic(() => import('react-tweet-embed'));
 
 const Modal = dynamic(
@@ -70,7 +66,7 @@ export default function Home({
 						font-family: 'Inter', 'monospace' !important;
 					}
 				`}</style>
-        <style>{customCss}</style>
+        <style dangerouslySetInnerHTML={{ __html: customCss }} />
         <div dangerouslySetInnerHTML={{ __html: customHead }} />
       </Head>
       <NextSeo
@@ -95,7 +91,6 @@ export default function Home({
         className='pagely-container'
         showCollectionViewDropdown={false}
         components={{
-          pdf: Pdf,
           modal: Modal,
           tweet: Tweet,
           collection: Collection,
