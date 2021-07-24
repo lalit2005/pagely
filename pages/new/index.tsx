@@ -6,9 +6,8 @@ import { SiNotion, SiGooglesheets, SiAirtable, SiGithub } from 'react-icons/si';
 import { RoughNotation } from 'react-rough-notation';
 
 const Page = () => {
-  let [integration, setIntegration] = useState<
-    'notion' | 'googleSheets' | 'github' | 'airtable'
-  >('notion');
+  let [integration, setIntegration] =
+    useState<'notion' | 'googleSheets' | 'github' | 'airtable'>('notion');
   const [highlight, setHighlight] = useState<boolean>(true);
   useEffect(() => {
     setHighlight(false);
