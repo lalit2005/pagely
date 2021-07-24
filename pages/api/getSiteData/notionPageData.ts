@@ -28,7 +28,7 @@ export default async function handler(
       customHead: pageData.customHead,
     });
 
-    res.setHeader('Cache-Control', 's-maxage=60');
+    res.setHeader('Cache-Control', 's-maxage=2');
     res.json({
       success: true,
       recordMap: recordMap,
