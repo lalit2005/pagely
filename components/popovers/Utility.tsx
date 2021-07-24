@@ -1,6 +1,6 @@
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import { HiOutlineClipboard } from 'react-icons/hi';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { useState } from 'react';
 import * as Slider from '@radix-ui/react-slider';
 
@@ -150,6 +150,7 @@ const Utility = () => {
           </ul>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };
