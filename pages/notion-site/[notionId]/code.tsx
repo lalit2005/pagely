@@ -11,7 +11,7 @@ import Utility from '@/components/popovers/Utility';
 import { useEffect } from 'react';
 import axios from 'axios';
 import useUserWithSession from '@/lib/useUrlWithSession';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Page = () => {
   const router = useRouter();
@@ -110,7 +110,6 @@ const Page = () => {
             </div>
           </div>
         </SidebarLayout>
-        <Toaster />
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as='div'

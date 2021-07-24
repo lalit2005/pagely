@@ -74,12 +74,12 @@ export default function Home({
         <div dangerouslySetInnerHTML={{ __html: customHead }} />
       </Head>
       <NextSeo
-        title={title}
+        title={siteName}
         description={siteDesc}
         canonical={'https://' + subdomain + '.pagely.site/'}
         openGraph={{
-          title: title,
-          url: `https://${subdomain}.vercel.app`,
+          title: siteName,
+          url: `https://${subdomain}.pagely.site`,
           images: [
             {
               url: ogImage === 'https://no-og.image' ? '' : ogImage,
