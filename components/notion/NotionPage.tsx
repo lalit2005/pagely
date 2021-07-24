@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {
   NotionRenderer,
   Code,
@@ -10,6 +11,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { NextSeo } from 'next-seo';
 import { getPageTitle } from 'notion-utils';
+import { useState } from 'react';
 
 const Tweet = dynamic(() => import('react-tweet-embed'));
 
@@ -20,8 +22,8 @@ const Modal = dynamic(
 
 export default function Home({
   recordMap,
-  customCss,
-  customHead,
+  customCss: css,
+  customHead: head,
   pageId,
   subdomain,
   ogImageUrl,
@@ -31,25 +33,25 @@ export default function Home({
   if (!recordMap) {
     return null;
   }
-  console.log(customHead);
   const title = getPageTitle(recordMap);
   const ogImage =
     ogImageUrl === ''
       ? 'https://ogimage.glitch.me/i/' + encodeURIComponent(title)
       : ogImageUrl;
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     window.addEventListener('load', () => {
       const link = document.createElement('link');
       link.rel = 'icon';
       const pageIconEmoji = document.querySelector('.notion-page-icon');
       link.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${
-        pageIconEmoji.innerHTML || '⚡️'
+        pageIconEmoji?.innerHTML || '⚡️'
       }</text></svg>`;
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
   }, []);
+  const [customCss, setCustomCss] = useState(css);
+  const [customHead, setCustomHead] = useState(head);
 
   return (
     <div>

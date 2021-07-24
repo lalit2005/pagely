@@ -11,7 +11,7 @@ const Page = () => {
 export default Page;
 
 // @ts-ignore
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const pageId = parsePageId(req.url);
-  return;
-};
+// export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+//   const pageId = parsePageId(req.url);
+//   return;
+// };

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { NotionAPI } from 'notion-client';
 import Homepage from '@/components/Homepage';
 import { GetServerSideProps } from 'next';
@@ -6,6 +7,10 @@ import { parsePageId } from 'notion-utils';
 import NotFoundPage from '@/components/NotFoundPage';
 
 import prisma from '@/utils/prisma';
+import useSwr from 'swr';
+import { useState } from 'react';
+import swrFetcher from '@/lib/swrFetcher';
+import { useEffect } from 'react';
 
 const Page = ({
   homepage,
@@ -33,17 +38,33 @@ const Page = ({
   }
 
   if (integration === 'notion') {
+    const [pageData, setPageData] = useState(recordMap);
+    const [css, setCss] = useState<string>(customCss);
+    const [head, setHead] = useState<string>(customHead);
+    let notionPageData = useSwr(
+      `/api/getSiteData/notionPageData/?pageId=${pageId}&subdomain=${subdomain}`,
+      swrFetcher
+    ).data;
+
+    useEffect(() => {
+      if (notionPageData?.success) {
+        setPageData(notionPageData?.recordMap);
+        setCss(notionPageData?.customCss);
+        setHead(notionPageData?.customHead);
+      }
+    }, [notionPageData]);
+
     return (
       <div>
         <NotionPage
-          recordMap={recordMap}
-          customCss={customCss}
+          recordMap={pageData}
+          customCss={css}
           pageId={pageId}
           subdomain={subdomain}
           ogImageUrl={ogImageUrl}
           siteName={siteName}
           siteDesc={siteDesc}
-          customHead={customHead}
+          customHead={head}
         />
       </div>
     );
