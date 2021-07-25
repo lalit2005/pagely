@@ -5,7 +5,6 @@ const validateData = (data) => {
   if (!data.notionPageUrl.includes('/')) {
     toast.error('Please enter a valid notion.so or notion.site URL', {
       duration: 5000,
-      position: 'bottom-center',
     });
     return;
   }
@@ -17,7 +16,6 @@ const validateData = (data) => {
   if (!host.endsWith('notion.so') && !host.endsWith('.notion.site')) {
     toast.error('Please enter a valid notion.so or notion.site URL', {
       duration: 5000,
-      position: 'bottom-center',
     });
     return;
   }
@@ -30,7 +28,6 @@ const validateData = (data) => {
       'Please enter a valid subdomain without any special characters. You can use alphanumeric characters, and hyphens',
       {
         duration: 5000,
-        position: 'bottom-center',
       }
     );
     return;
@@ -42,7 +39,6 @@ const validateData = (data) => {
       'Subdomain should not contain any special characters other than hyphens',
       {
         duration: 5000,
-        position: 'bottom-center',
       }
     );
     return;
@@ -54,7 +50,6 @@ const validateData = (data) => {
       'Subdomain should not start or end with a special character or a hyphen',
       {
         duration: 5000,
-        position: 'bottom-center',
       }
     );
     return;
@@ -64,7 +59,6 @@ const validateData = (data) => {
   if (/^http/gi.test(subdomain)) {
     toast.error('Subdomain should not start with http', {
       duration: 5000,
-      position: 'bottom-center',
     });
     return;
   }
@@ -74,7 +68,6 @@ const validateData = (data) => {
   if (ogImageUrl.startsWith('data:')) {
     toast.error('Please enter a valid URL. Do not use data URIs', {
       duration: 5000,
-      position: 'bottom-center',
     });
     return;
   }

@@ -82,7 +82,6 @@ const Page = () => {
         setIsLoading(false);
         toast.error('Failed to update SEO settings\n' + err.message, {
           duration: 5000,
-          position: 'bottom-center',
         });
       });
     console.log('done posting');

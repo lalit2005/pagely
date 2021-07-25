@@ -95,7 +95,7 @@ const Page = () => {
                       console.log(res);
                       setIsLoading(false);
                       toast.success('Successfully updated site code.', {
-                        position: 'bottom-center',
+                        duration: 5000,
                       });
                     });
                 }}

@@ -1,4 +1,5 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: [
@@ -13,6 +14,7 @@ module.exports = {
       colors: {
         'custom-blue': '#375EF1',
         'twitter-blue': '#1da1f2',
+        bluegray: colors.blueGray,
       },
     },
     fontFamily: {

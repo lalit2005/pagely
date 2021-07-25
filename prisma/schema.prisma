@@ -18,4 +18,5 @@ model notionSites {
   subdomain     String   @unique @db.VarChar
   ogImageUrl    String?  @db.VarChar
   customHead    String?  @db.VarChar
+  inShowcase    Boolean  @default(false)
 }

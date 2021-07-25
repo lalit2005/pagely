@@ -9,6 +9,7 @@ import { useClerkSWR } from '@/lib/fetcher';
 import ProfileDropdown from '@/components/popovers/ProfileDropdown';
 import DashboardNav from '@/components/dashboard/DashboardNav';
 import { HiOutlineNewspaper } from 'react-icons/hi';
+import { Toaster } from 'react-hot-toast';
 
 const SidebarLayout: React.FC<{
   activeTab: 'code' | 'setup' | 'pages' | 'settings' | 'seo';
@@ -112,11 +113,10 @@ const SidebarLayout: React.FC<{
             firstName={firstName}
             signOut={signOut}
           />
-          {/* </div> */}
         </div>
         <div className='mx-10 mt-20'>{props.children}</div>
       </div>
-      {/* </MainLayout> */}
+      <Toaster />
     </div>
   );
 };
