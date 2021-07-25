@@ -79,6 +79,18 @@ const SidebarLayout: React.FC<{
               </li>
               <li
                 className={`my-2 rounded ${
+                  activeTab === 'pages' ? ' bg-gray-200' : ' hover:bg-gray-300'
+                }`}>
+                <Link href=''>
+                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                    {' '}
+                    <HiOutlineNewspaper className='relative inline-block bottom-[2px]' />{' '}
+                    Pages
+                  </a>
+                </Link>
+              </li>
+              <li
+                className={`my-2 rounded ${
                   activeTab === 'settings'
                     ? ' bg-gray-200'
                     : ' hover:bg-gray-300'
@@ -88,18 +100,6 @@ const SidebarLayout: React.FC<{
                     {' '}
                     <FiSettings className='relative inline-block bottom-[2px]' />{' '}
                     Settings
-                  </a>
-                </Link>
-              </li>
-              <li
-                className={`my-2 rounded ${
-                  activeTab === 'pages' ? ' bg-gray-200' : ' hover:bg-gray-300'
-                }`}>
-                <Link href=''>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
-                    {' '}
-                    <HiOutlineNewspaper className='relative inline-block bottom-[2px]' />{' '}
-                    Pages
                   </a>
                 </Link>
               </li>
