@@ -13,7 +13,7 @@ export default function Navbar() {
         <div>
           <ul className='flex list-none justify-evenly'>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
-              <Link href='#'>Showcase</Link>
+              <Link href='/showcase'>Showcase</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
               <Link href='#'>Guides</Link>

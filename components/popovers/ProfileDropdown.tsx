@@ -68,7 +68,7 @@ const ProfileDropdown = ({
               </DropdownMenu.Group>
               <DropdownMenu.Group>
                 <li className='focus:bg-blue-100 hover:bg-blue-100'>
-                  <Link href='#'>
+                  <Link href='/showcase'>
                     <a className='block px-5 py-2'>Showcase</a>
                   </Link>
                 </li>
