@@ -186,7 +186,11 @@
 }
 
 .notion-collection-card-body .notion-page-title-text {
-  font-size: 22px;
+  font-size: 14px;
+}
+
+.notion-board .notion-board-view {
+  max-width: 720px !important;
 }
 
 @media only screen and (max-width: 1200px) {

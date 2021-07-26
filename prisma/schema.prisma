@@ -20,3 +20,9 @@ model notionSites {
   customHead    String?  @db.VarChar
   inShowcase    Boolean  @default(false)
 }
+
+model notionPages {
+  id            String  @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  notionPageUrl String  @unique @db.VarChar
+  ogImageUrl    String? @db.VarChar
+}

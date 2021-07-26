@@ -25,7 +25,7 @@ export default function Home({
   customCss: css,
   customHead: head,
   pageId,
-  subdomain,
+  url,
   ogImageUrl,
   siteName,
   siteDesc,
@@ -56,17 +56,6 @@ export default function Home({
   return (
     <div>
       <Head>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='true'
-        />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-          rel='stylesheet'
-        />
         <style>{`
 					.pagely-container {
 						font-family: 'Inter', 'monospace' !important;
@@ -78,10 +67,10 @@ export default function Home({
       <NextSeo
         title={siteName}
         description={siteDesc}
-        canonical={'https://' + subdomain + '.pagely.site/'}
+        canonical={url}
         openGraph={{
           title: siteName,
-          url: `https://${subdomain}.pagely.site`,
+          url: url,
           images: [
             {
               url: ogImage === 'https://no-og.image' ? '' : ogImage,
