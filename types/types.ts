@@ -11,3 +11,9 @@ export interface NotionSeoSettings {
   siteName: string;
   siteDesc: string;
 }
+export interface ShowcaseWebsites {
+  siteName: string;
+  subdomain: string;
+  ogImageUrl: string;
+  id: string;
+}

@@ -18,8 +18,7 @@ export default function Page() {
               No coding required
             </p>
             <h1 className='text-5xl font-extrabold'>
-              The quickest way to launch beautiful websites from your favourite
-              apps
+              Build beautiful websites in light speed
             </h1>
             <h2 className='mt-5 text-xl text-gray-600'>
               Launch websites from{' '}

@@ -32,9 +32,7 @@ const ProfileDropdown = ({
               side='left'
               sideOffset={10}
               className='px-2 py-px text-gray-100 bg-gray-900 rounded'>
-              {fullName === '' || ' '
-                ? emailAddresses.toString().split('@')[0]
-                : fullName}
+              {fullName || emailAddresses.toString().split('@')[0]}
               <Tooltip.Arrow />
             </Tooltip.Content>
           </Tooltip.Root>
@@ -50,6 +48,13 @@ const ProfileDropdown = ({
                       {emailAddresses.toString()}
                     </p>
                   </div>
+                </li>
+              </DropdownMenu.Group>
+              <DropdownMenu.Group className='lg:hidden'>
+                <li className='focus:bg-blue-100 hover:bg-blue-100'>
+                  <Link href='/new'>
+                    <a className='block px-5 py-2'>Add new site</a>
+                  </Link>
                 </li>
               </DropdownMenu.Group>
               <DropdownMenu.Group>

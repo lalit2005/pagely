@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/router';
 
 import InfoPopover from '@/components/popovers/InfoPopover';
 import TweetTitleImage from '@/public/popover-images/og-title.png';
@@ -17,6 +18,7 @@ import validateData from '@/lib/notion/validateData';
 import axios from 'axios';
 import { useState } from 'react';
 import Loader from 'react-loader-spinner';
+import { useEffect } from 'react';
 
 const Notion = () => {
   const {
@@ -28,6 +30,12 @@ const Notion = () => {
   });
 
   const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch('/dashboard');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleFormSubmit = async (data: NewNotionSiteFormValues) => {
     setLoading(true);
@@ -46,6 +54,7 @@ const Notion = () => {
     if (res.data.success) {
       toast.success('Notion site created!');
       setLoading(false);
+      router.push('/dashboard');
     } else if (res.data.success === false) {
       toast.error(res.data.error);
       setLoading(false);
