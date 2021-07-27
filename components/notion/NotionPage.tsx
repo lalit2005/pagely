@@ -52,9 +52,6 @@ export default function Home({
       }</text></svg>`;
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
-    router.replace('/', null, {
-      shallow: true,
-    });
   }, [router]);
   const [customCss, setCustomCss] = useState(css);
   const [customHead, setCustomHead] = useState(head);
