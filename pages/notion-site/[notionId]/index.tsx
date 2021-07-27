@@ -15,7 +15,7 @@ const Page = () => {
   return (
     <div>
       <SidebarLayout activeTab='setup'>
-        <h1 className='text-4xl font-extrabold'>
+        <h1 className='text-4xl font-extrabold capitalize'>
           {data?.siteName || 'Just a second...'}
         </h1>
         <p className='mt-4 text-gray-800 font-base'>

@@ -6,11 +6,17 @@ import { HiOutlineGlobeAlt } from 'react-icons/hi';
 import { VscRocket } from 'react-icons/vsc';
 import { GoBrowser } from 'react-icons/go';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
+import { SignedIn } from '@clerk/clerk-react';
+
+import RedirectIfUser from '@/components/RedirectIfUser';
 
 export default function Page() {
   return (
     <div>
       <Navbar />
+      <SignedIn>
+        <RedirectIfUser />
+      </SignedIn>
       <div className='mx-10'>
         <div className='max-w-5xl mx-auto mt-24'>
           <div className='text-center'>

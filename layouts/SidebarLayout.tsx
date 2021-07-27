@@ -35,7 +35,7 @@ const SidebarLayout: React.FC<{
           <div>
             <Link href='/dashboard'>
               <a>
-                <small className='text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                <small className='text-gray-700 hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                   {' '}
                   {'<'}- Go back
                 </small>
@@ -47,7 +47,7 @@ const SidebarLayout: React.FC<{
                   activeTab === 'setup' ? ' bg-gray-200' : ' hover:bg-gray-300'
                 }`}>
                 <Link href={'/notion-site/' + data?.id}>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <GoInbox className='relative inline-block bottom-[2px]' />{' '}
                     Setup
@@ -59,7 +59,7 @@ const SidebarLayout: React.FC<{
                   activeTab === 'seo' ? ' bg-gray-200' : ' hover:bg-gray-300'
                 }`}>
                 <Link href={`/notion-site/${data?.id}/seo`}>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <BiSearchAlt className='relative inline-block bottom-[2px]' />{' '}
                     SEO
@@ -71,7 +71,7 @@ const SidebarLayout: React.FC<{
                   activeTab === 'code' ? ' bg-gray-200' : ' hover:bg-gray-300'
                 }`}>
                 <Link href={`/notion-site/${data?.id}/code`}>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <BiCode className='relative inline-block bottom-[2px]' />{' '}
                     Code injection
@@ -83,7 +83,7 @@ const SidebarLayout: React.FC<{
                   activeTab === 'pages' ? ' bg-gray-200' : ' hover:bg-gray-300'
                 }`}>
                 <Link href=''>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <HiOutlineNewspaper className='relative inline-block bottom-[2px]' />{' '}
                     Pages
@@ -96,8 +96,8 @@ const SidebarLayout: React.FC<{
                     ? ' bg-gray-200'
                     : ' hover:bg-gray-300'
                 }`}>
-                <Link href=''>
-                  <a className='block px-3 py-2 my-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700'>
+                <Link href={`/notion-site/${data?.id}/settings`}>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <FiSettings className='relative inline-block bottom-[2px]' />{' '}
                     Settings

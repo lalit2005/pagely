@@ -46,11 +46,9 @@ const Page = () => {
     <div>
       <div>
         <SidebarLayout activeTab='code'>
-          <h1 className='text-4xl font-extrabold'>
-            {data?.siteName || 'Just a second...'}
-          </h1>
+          <h1 className='text-4xl font-extrabold'>Code Injection</h1>
           <p className='mt-4 text-gray-800 font-base'>
-            {data?.siteDesc || 'Crunching the data. Please give a second.'}
+            {data?.siteName || 'Just a second...'}
           </p>
           <div className='my-3'>
             <button
@@ -93,15 +91,18 @@ const Page = () => {
                     })
                     .then((res) => {
                       console.log(res);
-                      setIsLoading(false);
                       toast.success('Successfully updated site code.', {
                         duration: 5000,
                       });
+                      setIsLoading(false);
                     });
                 }}
-                className={`h-10 px-3 shadow-md bg-gray-800 rounded text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700 ${
-                  isLoading && 'opacity-60 cursor-pointer pointer-events-none'
+                className={`h-10 px-3 mb-10 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700 ${
+                  isLoading && 'opacity-50 cursor-wait'
                 }`}>
+                {/* className={`h-10 px-3 shadow-md bg-gray-800 rounded text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700 ${
+                  isLoading && 'opacity-60 cursor-pointer pointer-events-none'
+                }`}> */}
                 Update Custom Code
               </button>
               <p className='mt-3 text-base text-gray-600'>

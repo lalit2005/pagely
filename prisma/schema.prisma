@@ -8,21 +8,23 @@ datasource db {
 }
 
 model notionSites {
-  id            String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-  notionPageUrl String   @unique @db.VarChar
-  siteName      String   @db.VarChar
-  siteDesc      String   @db.VarChar
-  customCss     String?  @db.VarChar
-  createdAt     DateTime @default(now()) @db.Timestamp(6)
-  createdBy     String   @db.VarChar
-  subdomain     String   @unique @db.VarChar
-  ogImageUrl    String?  @db.VarChar
-  customHead    String?  @db.VarChar
-  inShowcase    Boolean  @default(false)
+  id                  String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  notionPageUrl       String   @unique @db.VarChar
+  siteName            String   @db.VarChar
+  siteDesc            String   @db.VarChar
+  customCss           String?  @db.VarChar
+  createdAt           DateTime @default(now()) @db.Timestamp(6)
+  createdBy           String   @db.VarChar
+  subdomain           String   @unique @db.VarChar
+  ogImageUrl          String?  @db.VarChar
+  customHead          String?  @db.VarChar
+  inShowcase          Boolean  @default(false)
+  isPasswordProtected Boolean  @default(false)
 }
 
 model notionPages {
   id            String  @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  url           String  @unique @db.VarChar
   notionPageUrl String  @unique @db.VarChar
   ogImageUrl    String? @db.VarChar
 }

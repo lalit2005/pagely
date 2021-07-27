@@ -93,12 +93,9 @@ const Page = () => {
         <DevTool control={control} placement='top-right' />
       )}
       <SidebarLayout activeTab='seo'>
-        <h1 className='text-4xl font-extrabold'>
-          {data?.siteName || 'Just a second...'}
-        </h1>
+        <h1 className='text-4xl font-extrabold'>SEO Settings</h1>
         <p className='mt-4 text-gray-800 font-base'>
-          {data?.siteDesc ||
-            'Crunching the data for you. Please give a second.'}
+          {data?.siteName || 'Just a second...'}
         </p>
         <div className='my-5 mt-10'>
           <h2 className='mb-5 text-2xl font-bold'>Twitter Preview</h2>
