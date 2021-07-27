@@ -7,6 +7,7 @@ export default requireSession(
   async (req: NextApiRequest, res: NextApiResponse) => {
     const siteData = await prisma.notionSites.update({
       data: {
+        // @ts-ignore
         isPasswordProtected: req.body.isPasswordProtected,
       },
       where: {
