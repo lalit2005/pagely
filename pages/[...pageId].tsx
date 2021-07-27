@@ -5,7 +5,7 @@ import { parsePageId } from 'notion-utils';
 
 import prisma from '@/utils/prisma';
 import NotFoundPage from '@/components/NotFoundPage';
-import NotionPage from '@/components/notion/NotionPage';
+import NotionSubPage from '@/components/notion/NotionSubPage';
 import { useEffect, useState } from 'react';
 import useSwr from 'swr';
 import swrFetcher from '@/lib/swrFetcher';
@@ -43,7 +43,7 @@ const Page = ({
 
   return (
     <div>
-      <NotionPage
+      <NotionSubPage
         recordMap={pageData}
         customCss={css}
         pageId={pageId}
@@ -60,6 +60,11 @@ const Page = ({
 export default Page;
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=60, stale-while-revalidate=59'
+  );
+
   try {
     const notion = new NotionAPI();
     // console.log(req.url);
