@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import { NextSeo } from 'next-seo';
 import { getPageTitle } from 'notion-utils';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Tweet = dynamic(() => import('react-tweet-embed'));
 
@@ -39,6 +40,8 @@ export default function Home({
       ? 'https://ogimage.glitch.me/i/' + encodeURIComponent(title)
       : ogImageUrl;
 
+  const router = useRouter();
+
   useEffect(() => {
     window.addEventListener('load', () => {
       const link = document.createElement('link');
@@ -49,7 +52,10 @@ export default function Home({
       }</text></svg>`;
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
-  }, []);
+    router.replace('/', null, {
+      shallow: true,
+    });
+  }, [router]);
   const [customCss, setCustomCss] = useState(css);
   const [customHead, setCustomHead] = useState(head);
 

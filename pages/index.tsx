@@ -81,7 +81,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     const reqUrl = req.headers.host;
     res.setHeader(
       'Cache-Control',
-      'public, s-maxage=60, stale-while-revalidate=59'
+      'public, s-maxage=900, stale-while-revalidate=59'
     );
 
     if (process.env.NODE_ENV !== 'production') {
