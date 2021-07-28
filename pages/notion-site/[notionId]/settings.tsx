@@ -143,12 +143,10 @@ const Page = () => {
                 </div>
                 <button
                   onClick={() => {
-                    setIsPasswordProtectedToTrue().then(() => {
-                      window.open(
-                        `https://staticshield.vercel.app/new/?name=${data?.siteName}&desc=${data?.siteDesc}&url=${data?.subdomain}.pagely.site`,
-                        '_blank'
-                      );
-                    });
+                    window.open(
+                      `http://localhost:3001/new/?name=${data?.siteName}&desc=${data?.siteDesc}&url=${data?.subdomain}.pagely.site&id=${data?.id}`,
+                      '_blank'
+                    );
                   }}
                   className={`h-10 inline-flex items-center px-3 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700`}>
                   Password protect{' '}

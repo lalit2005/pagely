@@ -66,6 +66,7 @@ const privatePages = [
   '/notion-site/[notionId]/code',
   '/notion-site/[notionId]/seo',
   '/notion-site/[notionId]/settings',
+  '/password-protecting/[siteId]',
 ];
 
 const MyApp = ({ Component, pageProps }) => {
