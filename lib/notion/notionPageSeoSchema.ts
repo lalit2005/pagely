@@ -12,10 +12,5 @@ export const notionPageSeoSchema = z.object({
     .max(100, 'Description must be less than 100 characters long.')
     .nonempty('Please fill in the description.')
     .optional(),
-  ogImageUrl: z
-    .string()
-    .url("Please enter a valid URL for the site's OG image.")
-    .min(1, 'Please enter a valid URL for the image.')
-    .optional()
-    .nullable(),
+  ogImageUrl: z.string().optional(),
 });
