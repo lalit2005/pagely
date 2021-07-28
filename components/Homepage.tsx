@@ -24,7 +24,7 @@ export default function Page() {
               No coding required
             </p>
             <h1 className='text-5xl font-extrabold'>
-              Build beautiful websites in light speed
+              Build beautiful websites. In light speed
             </h1>
             <h2 className='mt-5 text-xl text-gray-600'>
               Launch websites from{' '}
