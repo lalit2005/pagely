@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import TextareaAutosize from 'react-textarea-autosize';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
+import truncate from 'lodash.truncate';
 
 import { useClerkSWR } from '@/lib/fetcher';
 import { notionSites } from '@prisma/client';
@@ -61,8 +62,13 @@ const Page = () => {
             <h2 className='text-2xl font-bold'>Showcase Settings</h2>
             <div className='flex items-center my-5'>
               <span className='inline-block mr-2'>
-                I prefer not to display <strong>{data?.siteName}</strong> in
-                showcase
+                I prefer not to display{' '}
+                <strong title={data?.siteName}>
+                  {truncate(data?.siteName, {
+                    length: 15,
+                  })}
+                </strong>{' '}
+                in showcase
               </span>
               <Switch
                 checked={enabled}
@@ -78,7 +84,13 @@ const Page = () => {
                 />
               </Switch>
               <span className='inline-block ml-2'>
-                Display <strong>{data?.siteName}</strong> in{' '}
+                Display{' '}
+                <strong title={data?.siteName}>
+                  {truncate(data?.siteName, {
+                    length: 15,
+                  })}
+                </strong>{' '}
+                in{' '}
                 <Link href='/showcase'>
                   <a className='text-blue-500 hover:underline'>Showcase</a>
                 </Link>
@@ -122,7 +134,7 @@ const Page = () => {
                     protected
                   </span>
                 </div>
-                <button className='h-10 px-3 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700'>
+                <button className='h-10 px-3 mb-10 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700'>
                   <a
                     href='https://staticshield.vercel.app/dashboard'
                     target='_blank'
@@ -130,9 +142,6 @@ const Page = () => {
                     View details
                   </a>
                 </button>
-                <p className='mt-2 mb-10 text-gray-700 font-base'>
-                  You&apos;ll have to double click me to continue!
-                </p>
               </div>
             ) : (
               <div>
@@ -148,7 +157,7 @@ const Page = () => {
                       '_blank'
                     );
                   }}
-                  className={`h-10 inline-flex items-center px-3 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700`}>
+                  className={`mb-10 h-10 inline-flex items-center px-3 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700`}>
                   Password protect{' '}
                   <strong className='mx-1'>{data?.siteName}</strong> with{' '}
                   <span className='inline-flex !items-center justify-center p-1 mx-1 bg-white rounded'>
@@ -162,9 +171,6 @@ const Page = () => {
                   </span>
                   StaticShield
                 </button>
-                <p className='mt-2 mb-10 text-gray-700 font-base'>
-                  You&apos;ll have to double click me to continue!
-                </p>
               </div>
             )}
           </div>
