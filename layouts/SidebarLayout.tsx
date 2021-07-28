@@ -10,10 +10,12 @@ import ProfileDropdown from '@/components/popovers/ProfileDropdown';
 import DashboardNav from '@/components/dashboard/DashboardNav';
 import { HiOutlineNewspaper } from 'react-icons/hi';
 import { Toaster } from 'react-hot-toast';
+import Head from 'next/head';
 
 const SidebarLayout: React.FC<{
   activeTab: 'code' | 'setup' | 'pages' | 'settings' | 'seo';
-}> = ({ activeTab, ...props }) => {
+  title?: string;
+}> = ({ activeTab, title, ...props }) => {
   const { emailAddresses, profileImageUrl, fullName, firstName } = useUser();
   const { signOut } = useClerk();
 
@@ -21,11 +23,21 @@ const SidebarLayout: React.FC<{
   const { data } = useClerkSWR<notionSites>(
     `/api/getSiteData/notion/?siteId=${router.query.notionId}`
   );
-
   return (
     <div>
       <div className='block lg:hidden'>
         <DashboardNav />
+        <Head>
+          <title>
+            {title ||
+              data?.siteName +
+                ' - ' +
+                activeTab.charAt(0).toUpperCase() +
+                activeTab.slice(1) +
+                ' | ' +
+                'Pagely'}
+          </title>
+        </Head>
       </div>
       <div className='lg:flex'>
         {/* <div className='sticky top-0 overflow-y-hidden'> */}
