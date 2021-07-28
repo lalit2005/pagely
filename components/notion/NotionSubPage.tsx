@@ -22,8 +22,8 @@ const Modal = dynamic(
 
 export default function Home({
   recordMap,
-  customCss: css,
-  customHead: head,
+  customCss,
+  customHead,
   pageId,
   url,
   ogImageUrl,
@@ -48,8 +48,6 @@ export default function Home({
       document.getElementsByTagName('head')[0]?.appendChild(link);
     });
   }, []);
-  const [customCss, setCustomCss] = useState(css);
-  const [customHead, setCustomHead] = useState(head);
 
   return (
     <div>

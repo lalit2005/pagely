@@ -26,8 +26,6 @@ const Page = ({
   }
 
   const [pageData, setPageData] = useState(recordMap);
-  const [css, setCss] = useState<string>(customCss);
-  const [head, setHead] = useState<string>(customHead);
   let notionPageData = useSwr(
     `/api/getSiteData/notionPageData/?pageId=${pageId}&subdomain=${subdomain}`,
     swrFetcher
@@ -36,8 +34,6 @@ const Page = ({
   useEffect(() => {
     if (notionPageData?.success) {
       setPageData(notionPageData?.recordMap);
-      setCss(notionPageData?.customCss);
-      setHead(notionPageData?.customHead);
     }
   }, [notionPageData]);
 
@@ -45,13 +41,13 @@ const Page = ({
     <div>
       <NotionSubPage
         recordMap={pageData}
-        customCss={css}
+        customCss={customCss}
         pageId={pageId}
         url={`https://${subdomain}.pagely.site`}
         ogImageUrl={ogImageUrl}
         siteName={siteName}
         siteDesc={siteDesc}
-        customHead={head}
+        customHead={customHead}
       />
     </div>
   );
