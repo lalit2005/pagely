@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import TextareaAutosize from 'react-textarea-autosize';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import truncate from 'lodash.truncate';
@@ -7,9 +6,6 @@ import truncate from 'lodash.truncate';
 import { useClerkSWR } from '@/lib/fetcher';
 import { notionSites } from '@prisma/client';
 import SidebarLayout from '@/layouts/SidebarLayout';
-import handleHotkeys from '@/lib/handleHotkeys';
-import Utility from '@/components/popovers/Utility';
-import { useEffect } from 'react';
 import axios from 'axios';
 import useUserWithSession from '@/lib/useUrlWithSession';
 import toast from 'react-hot-toast';
@@ -26,6 +22,7 @@ const Page = () => {
   const urlWithSession = useUserWithSession(
     '/api/updateSiteData/notion/showcase'
   );
+  const deleteUrlWithSession = useUserWithSession('/api/deleteSite/notion');
 
   const passwordUrlWithSession = useUserWithSession(
     '/api/updateSiteData/notion/password'
@@ -33,14 +30,6 @@ const Page = () => {
   const [enabled, setEnabled] = useState(data?.inShowcase);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const setIsPasswordProtectedToTrue = async () => {
-    const res = await axios.post(passwordUrlWithSession, {
-      isPasswordProtected: true,
-      siteId: data?.id,
-    });
-    return res.data;
-  };
 
   function closeModal() {
     setIsOpen(false);
@@ -178,7 +167,9 @@ const Page = () => {
           <div className='mt-8'>
             <h2 className='text-2xl font-bold text-red-500'>Danger Zone</h2>
             <div className='mt-5'>
-              <button className='h-10 px-3 mb-10 bg-red-600 rounded shadow-md text-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-800 hover:bg-red-400'>
+              <button
+                onClick={openModal}
+                className='h-10 px-3 mb-10 bg-red-600 rounded shadow-md text-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-800 hover:bg-red-400'>
                 {/* <button className='px-2 py-1 text-red-600 border border-red-500 rounded shadow bg-red-50 hover:bg-red-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-200'> */}
                 Delete <strong>{data?.siteName}</strong>
               </button>
@@ -216,27 +207,48 @@ const Page = () => {
                 leave='ease-in duration-200'
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'>
-                <div className='inline-block w-full max-w-3xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white border rounded-md shadow-xl border-gray-500/40'>
+                <div className='inline-block w-full max-w-lg p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white border rounded-md shadow-xl border-gray-500/40'>
                   <Dialog.Title
                     as='h3'
-                    className='text-lg font-medium leading-6 text-gray-900'>
-                    CSS Utilities 😍
+                    className='text-lg font-medium leading-6 text-red-700'>
+                    Are you sure that you want to delete{' '}
+                    <strong>{data?.siteName}</strong>?
                   </Dialog.Title>
                   <div className='mt-2 mb-10'>
                     <p className='text-sm text-gray-500'>
-                      A tiny set of utilities to help you style your app and
-                      make it look great. Many more utilities are coming soon.
+                      Proceed with caution. This action cannot be reversed.
                     </p>
-                    <hr className='w-full mx-auto my-5 text-gray-200' />
-                    <Utility />
                   </div>
 
                   <div className='mt-4'>
                     <button
                       type='button'
-                      className='inline-flex justify-center px-4 py-1 text-sm font-medium text-blue-900 bg-blue-100 border border-blue-500 rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500'
-                      onClick={openModal}>
-                      Thanks!
+                      className='inline-flex justify-center px-4 py-1 mr-2 text-sm font-medium text-blue-900 bg-blue-100 border border-blue-500 rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500'
+                      onClick={closeModal}>
+                      Cancel
+                    </button>
+                    <button
+                      type='button'
+                      className='inline-flex justify-center px-4 py-1 text-sm font-medium text-red-900 bg-red-100 border border-red-500 rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500'
+                      onClick={() => {
+                        axios
+                          .post(deleteUrlWithSession, {
+                            siteId: data?.id,
+                          })
+                          .then((res) => {
+                            if (res.data.success) {
+                              toast.success('Site deleted successfully', {
+                                duration: 2000,
+                              });
+                              setTimeout(() => {
+                                router.push('/dashboard');
+                              }, 2000);
+                            } else {
+                              toast.error('Site deletion failed');
+                            }
+                          });
+                      }}>
+                      Delete
                     </button>
                   </div>
                 </div>
