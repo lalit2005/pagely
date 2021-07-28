@@ -82,7 +82,7 @@ const SidebarLayout: React.FC<{
                 className={`my-2 rounded ${
                   activeTab === 'pages' ? ' bg-gray-200' : ' hover:bg-gray-300'
                 }`}>
-                <Link href=''>
+                <Link href={`/notion-site/${data?.id}/pages`}>
                   <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
                     {' '}
                     <HiOutlineNewspaper className='relative inline-block bottom-[2px]' />{' '}
