@@ -1,6 +1,6 @@
 import * as z from 'zod';
 
-export const newNotionSiteSchemata = z.object({
+export const newNotionSiteSchema = z.object({
   name: z
     .string()
     .min(1, 'Name must be at least 1 character long.')
@@ -24,9 +24,5 @@ export const newNotionSiteSchemata = z.object({
     .nonempty(
       'Please fill in the subdomain field with your favourite subdomain.'
     ),
-  ogImageUrl: z
-    .string()
-    .url("Please enter a valid URL for the site's OG image.")
-    .min(1, 'Please enter a valid URL for the image.')
-    .nonempty('Please enter a valid URL for the image.'),
+  ogImageUrl: z.string().optional(),
 });
