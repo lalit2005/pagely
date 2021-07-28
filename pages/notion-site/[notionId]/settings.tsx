@@ -142,7 +142,7 @@ const Page = () => {
                 <button
                   onClick={() => {
                     window.open(
-                      `http://localhost:3001/new/?name=${data?.siteName}&desc=${data?.siteDesc}&url=${data?.subdomain}.pagely.site&id=${data?.id}`,
+                      `https://staticshield.vercel.app/new/?name=${data?.siteName}&desc=${data?.siteDesc}&url=${data?.subdomain}.pagely.site&id=${data?.id}`,
                       '_blank'
                     );
                   }}
