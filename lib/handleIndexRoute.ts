@@ -179,6 +179,13 @@ const handleIndexRoute: GetServerSideProps = async ({ req, res }) => {
             githubPageData: response.data,
           },
         };
+      } else {
+        return {
+          props: {
+            homepage: false,
+            notFound: true,
+          },
+        };
       }
     }
   } catch (e) {
