@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { DevTool } from '@hookform/devtools';
+import { BiCloudUpload } from 'react-icons/bi';
+import Dropzone from 'react-dropzone';
 
 import InfoPopover from '@/components/popovers/InfoPopover';
 import TweetTitleImage from '@/public/popover-images/og-title.png';
@@ -12,6 +14,7 @@ import { NotionSeoSettings } from 'types/types';
 import { notionPageSeoSchema } from '@/lib/notion/notionPageSeoSchema';
 import { useClerkSWR } from '@/lib/fetcher';
 import { notionSites } from '@prisma/client';
+import uploadImage from '@/lib/uploadImage';
 
 import SidebarLayout from '@/layouts/SidebarLayout';
 import Skeleton from 'react-loading-skeleton';
@@ -37,6 +40,7 @@ const Page = () => {
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
     control,
   } = useForm<NotionSeoSettings>({
@@ -158,6 +162,27 @@ const Page = () => {
               <p className='mt-2 text-sm text-red-500'>
                 {errors.ogImageUrl && errors.ogImageUrl.message}
               </p>
+              <div>
+                <div>
+                  <div className='inline-block px-2 py-px mt-2 text-sm text-gray-700 border border-gray-200 rounded cursor-pointer bg-gray-50 hover:bg-gray-100'>
+                    <Dropzone
+                      onDrop={(files) => {
+                        uploadImage(files, setValue);
+                      }}>
+                      {({ getRootProps, getInputProps }) => (
+                        <div {...getRootProps()}>
+                          <input type='file' {...getInputProps()} />
+                          <BiCloudUpload className='relative inline-block w-5 h-5 bottom-px' />{' '}
+                          Upload image
+                        </div>
+                      )}
+                    </Dropzone>
+                  </div>
+                  <p className='mt-1 text-sm text-gray-500'>
+                    Or just drag &apos;n&apos; drop an image over the button !
+                  </p>
+                </div>
+              </div>
             </label>
           </div>
 
