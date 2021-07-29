@@ -25,7 +25,6 @@ const Page = () => {
     })
     .then((res) => {
       if (res.data.success) {
-        alert(JSON.stringify(res.data));
         window.close();
       }
     })

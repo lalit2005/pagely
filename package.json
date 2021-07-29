@@ -23,6 +23,7 @@
     "@radix-ui/react-dropdown-menu": "^0.0.22",
     "@radix-ui/react-popover": "^0.0.19",
     "@radix-ui/react-slider": "^0.0.16",
+    "@radix-ui/react-tabs": "^0.0.15",
     "@radix-ui/react-tooltip": "^0.0.20",
     "@tailwindcss/forms": "^0.3.3",
     "ace-builds": "^1.4.12",
@@ -32,6 +33,7 @@
     "next-seo": "^4.26.0",
     "notion-client": "^4.7.9",
     "notion-utils": "^4.7.9",
+    "parse-github-url": "^1.0.2",
     "react": "^17.0.2",
     "react-ace": "^9.4.1",
     "react-colorful": "^5.3.0",
@@ -52,6 +54,7 @@
   "devDependencies": {
     "@clerk/types": "^1.7.0",
     "@hookform/devtools": "^3.1.0",
+    "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",
     "@types/react": "^17.0.13",
     "@types/react-textarea-autosize": "^4.3.6",

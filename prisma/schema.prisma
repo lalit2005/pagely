@@ -28,3 +28,15 @@ model notionPages {
   notionPageUrl String  @unique @db.VarChar
   ogImageUrl    String? @db.VarChar
 }
+
+model ghSites {
+  id         String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  repoUrl    String   @unique @db.VarChar
+  subdomain  String   @unique @db.VarChar
+  createdAt  DateTime @default(now()) @db.Timestamp(6)
+  createdBy  String   @db.VarChar
+  siteName   String   @db.VarChar
+  customCss  String?  @db.VarChar
+  customHead String?  @db.VarChar
+  inShowcase Boolean? @default(false)
+}

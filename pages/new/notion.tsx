@@ -13,7 +13,7 @@ import OgImage from '@/public/popover-images/og-image.png';
 
 import MainLayout from '@/layouts/MainLayout';
 import { NewNotionSiteFormValues } from 'types/types';
-import { newNotionSiteSchemata } from '@/lib/notion/newNotionSiteSchema';
+import { newNotionSiteSchema } from '@/lib/notion/newNotionSiteSchema';
 import validateData from '@/lib/notion/validateData';
 import axios from 'axios';
 import { useState } from 'react';
@@ -26,7 +26,7 @@ const Notion = () => {
     register,
     formState: { errors },
   } = useForm<NewNotionSiteFormValues>({
-    resolver: zodResolver(newNotionSiteSchemata),
+    resolver: zodResolver(newNotionSiteSchema),
   });
 
   const [loading, setLoading] = useState<boolean>(false);

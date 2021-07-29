@@ -6,6 +6,12 @@ export interface NewNotionSiteFormValues {
   ogImageUrl: string;
 }
 
+export interface NewGitHubSiteFormValues {
+  repoUrl: string;
+  subdomain: string;
+  siteName: string;
+}
+
 export interface NotionSeoSettings {
   ogImageUrl: string;
   siteName: string;

@@ -1,6 +1,7 @@
 import SiteCard from '@/components/dashboard/SiteCard';
+import GitHubSiteCard from '@/components/dashboard/GitHubSiteCard';
 import { useClerkSWR } from '@/lib/fetcher';
-import { notionSites } from '@prisma/client';
+import { ghSites, notionSites } from '@prisma/client';
 import MainLayout from '@/layouts/MainLayout';
 import Skeleton from 'react-loading-skeleton';
 import Link from 'next/link';
@@ -9,7 +10,12 @@ import truncate from 'lodash.truncate';
 import { HiOutlinePlusCircle } from 'react-icons/hi';
 
 const Dashboard = () => {
-  const { data, error } = useClerkSWR<notionSites[]>('/api/getAllSites/notion');
+  const { data: notionSites, error } = useClerkSWR<notionSites[]>(
+    '/api/getAllSites/notion'
+  );
+  const { data: githubSites, error: errorFetchingGithubSites } = useClerkSWR<
+    ghSites[]
+  >('/api/getAllSites/github');
   const { data: showcaseWebsites } = useClerkSWR<ShowcaseWebsites[]>(
     '/api/getShowcaseWebsites'
   );
@@ -17,26 +23,61 @@ const Dashboard = () => {
     <MainLayout>
       <div>
         <div className='max-w-5xl mx-auto'>
-          <h1 className='text-4xl font-bold text-center lg:text-left md:relative lg:left-10'>
+          <h1 className='text-4xl font-bold text-center lg:text-left md:relative lg:left-14'>
             Your websites
           </h1>
           <div className='flex'>
             <div
               className='flex-1 mr-2 mt-10 h-[70vh] overflow-y-scroll pb-5'
               id='websites'>
-              {data?.map((site) => (
-                // @ts-ignore
-                <SiteCard key={site.id} siteData={site} />
-              ))}
-              {error && <h1>An error occured</h1>}
-              {!error && !data && (
-                <Skeleton
-                  width='384px'
-                  height='130px'
-                  count={3}
-                  className='!block mb-8 mx-auto'
-                />
-              )}
+              <div>
+                <h3 className='mb-5 text-lg font-medium lg:text-left md:relative lg:left-14'>
+                  Notion websites
+                </h3>
+                {notionSites?.map((site) => (
+                  // @ts-ignore
+                  <SiteCard key={site.id} siteData={site} />
+                ))}
+                {error && (
+                  <h1>
+                    Your Notion sites could not be fetched. Please reload and
+                    try again
+                  </h1>
+                )}
+                {!error && !notionSites && (
+                  <Skeleton
+                    width='384px'
+                    height='200px'
+                    count={3}
+                    className='!block mb-8 mx-auto'
+                  />
+                )}
+              </div>
+              <hr className='w-[80%] my-5 text-gray-300 mx-auto' />
+              <div className='mb-5'>
+                <h3 className='mb-5 text-lg font-medium lg:text-left md:relative lg:left-14'>
+                  GitHub websites
+                </h3>
+                {githubSites?.map((site) => (
+                  // @ts-ignore
+                  <GitHubSiteCard key={site.id} siteData={site} />
+                  // <p key={site.id}>{JSON.stringify(site, null, 2)}</p>
+                ))}
+                {errorFetchingGithubSites && (
+                  <h1>
+                    Your GitHub sites could not be fetched. Please reload and
+                    try again
+                  </h1>
+                )}
+                {!errorFetchingGithubSites && !githubSites && (
+                  <Skeleton
+                    width='384px'
+                    height='200px'
+                    count={3}
+                    className='!block mb-8 mx-auto'
+                  />
+                )}
+              </div>
             </div>
             <div className='sticky top-0 flex-1 hidden mt-10 lg:block'>
               <div className='text-center transition-all bg-blue-100 border border-blue-300 rounded shadow-sm hover:bg-blue-200'>

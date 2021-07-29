@@ -4,25 +4,24 @@ import { Fragment, useState } from 'react';
 import truncate from 'lodash.truncate';
 
 import { useClerkSWR } from '@/lib/fetcher';
-import { notionSites } from '@prisma/client';
-import SidebarLayout from '@/layouts/SidebarLayout';
+import { ghSites } from '@prisma/client';
+import GitHubSiteLayout from '@/layouts/GitHubSiteLayout';
 import axios from 'axios';
 import useUserWithSession from '@/lib/useUrlWithSession';
 import toast from 'react-hot-toast';
 import { Switch } from '@headlessui/react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Page = () => {
   const router = useRouter();
-  const { data } = useClerkSWR<notionSites>(
-    `/api/getSiteData/notion/?siteId=${router.query.notionId}`
+  const { data } = useClerkSWR<ghSites>(
+    `/api/getSiteData/github/?siteId=${router.query.siteId}`
   );
 
   const urlWithSession = useUserWithSession(
-    '/api/updateSiteData/notion/showcase'
+    '/api/updateSiteData/github/showcase'
   );
-  const deleteUrlWithSession = useUserWithSession('/api/deleteSite/notion');
+  const deleteUrlWithSession = useUserWithSession('/api/deleteSite/github');
 
   const [enabled, setEnabled] = useState(data?.inShowcase);
   const [isLoading, setIsLoading] = useState(false);
@@ -39,7 +38,7 @@ const Page = () => {
   return (
     <div>
       <div>
-        <SidebarLayout activeTab='settings'>
+        <GitHubSiteLayout activeTab='settings'>
           <h1 className='text-4xl font-extrabold'>Settings</h1>
           <p className='mt-4 text-gray-800 font-base'>
             {data?.siteName || 'Just a second...'}
@@ -111,57 +110,6 @@ const Page = () => {
           </div>
           <hr className='w-[70vw] my-3 text-gray-200' />
           <div className='mt-8'>
-            <h2 className='text-2xl font-bold'>Password protection</h2>
-            {data?.isPasswordProtected ? (
-              <div>
-                <div className='flex items-center my-5'>
-                  <span className='inline-block'>
-                    <strong>{data?.siteName}</strong> has already been password
-                    protected
-                  </span>
-                </div>
-                <button className='h-10 px-3 mb-10 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700'>
-                  <a
-                    href='https://staticshield.vercel.app/dashboard'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    View details
-                  </a>
-                </button>
-              </div>
-            ) : (
-              <div>
-                <div className='flex items-center my-5'>
-                  <span className='inline-block'>
-                    Password protect <strong>{data?.siteName}</strong>
-                  </span>
-                </div>
-                <button
-                  onClick={() => {
-                    window.open(
-                      `https://staticshield.vercel.app/new/?name=${data?.siteName}&desc=${data?.siteDesc}&url=${data?.subdomain}.pagely.site&id=${data?.id}`,
-                      '_blank'
-                    );
-                  }}
-                  className={`mb-10 h-10 inline-flex items-center px-3 bg-gray-800 rounded shadow-md text-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700`}>
-                  Password protect{' '}
-                  <strong className='mx-1'>{data?.siteName}</strong> with{' '}
-                  <span className='inline-flex !items-center justify-center p-1 mx-1 bg-white rounded'>
-                    <Image
-                      src='/staticshield.png'
-                      alt=''
-                      width='20'
-                      height='20'
-                      // className='block mt-2'
-                    />
-                  </span>
-                  StaticShield
-                </button>
-              </div>
-            )}
-          </div>
-          <hr className='w-[70vw] my-3 text-gray-200' />
-          <div className='mt-8'>
             <h2 className='text-2xl font-bold text-red-500'>Danger Zone</h2>
             <div className='mt-5'>
               <button
@@ -172,7 +120,7 @@ const Page = () => {
               </button>
             </div>
           </div>
-        </SidebarLayout>
+        </GitHubSiteLayout>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as='div'

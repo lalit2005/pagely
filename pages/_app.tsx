@@ -67,6 +67,9 @@ const privatePages = [
   '/notion-site/[notionId]/seo',
   '/notion-site/[notionId]/settings',
   '/notion-site/[notionId]/pages',
+  '/github-site/[siteId]',
+  '/github-site/[siteId]/code',
+  '/github-site/[siteId]/settings',
   '/password-protecting/[siteId]',
 ];
 
