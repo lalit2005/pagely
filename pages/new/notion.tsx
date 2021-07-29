@@ -19,11 +19,15 @@ import axios from 'axios';
 import { useState } from 'react';
 import Loader from 'react-loader-spinner';
 import { useEffect } from 'react';
+import { BiCloudUpload } from 'react-icons/bi';
+import Dropzone from 'react-dropzone';
+import uploadImage from '@/lib/uploadImage';
 
 const Notion = () => {
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
   } = useForm<NewNotionSiteFormValues>({
     resolver: zodResolver(newNotionSiteSchema),
@@ -175,6 +179,25 @@ const Notion = () => {
               <p className='mt-2 text-sm text-red-500'>
                 {errors.ogImageUrl && errors.ogImageUrl.message}
               </p>
+              <div>
+                <div className='inline-block px-2 py-px mt-2 text-sm text-gray-700 border border-gray-200 rounded cursor-pointer bg-gray-50 hover:bg-gray-100'>
+                  <Dropzone
+                    onDrop={(files) => {
+                      uploadImage(files, setValue);
+                    }}>
+                    {({ getRootProps, getInputProps }) => (
+                      <div {...getRootProps()}>
+                        <input type='file' {...getInputProps()} />
+                        <BiCloudUpload className='relative inline-block w-5 h-5 bottom-px' />{' '}
+                        Upload image
+                      </div>
+                    )}
+                  </Dropzone>
+                </div>
+                <p className='mt-1 text-sm text-gray-500'>
+                  Or just drag &apos;n&apos; drop an image over the button !
+                </p>
+              </div>
             </label>
 
             <label className='block mt-10'>
