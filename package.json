@@ -53,7 +53,7 @@
     "@clerk/types": "^1.7.0",
     "@hookform/devtools": "^3.1.0",
     "@types/prettier": "^2.3.2",
-    "@types/react": "^17.0.13",
+    "@types/react": "^17.0.15",
     "@types/react-textarea-autosize": "^4.3.6",
     "autoprefixer": "^10.3.1",
     "eslint": "^7.31.0",
