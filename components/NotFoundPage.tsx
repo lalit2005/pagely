@@ -6,7 +6,7 @@ const NotFoundPage = () => {
       <Navbar />
       <div className='mt-10 text-center'>
         <h1 className='text-4xl font-bold'>404</h1>
-        <h2 className='text-3xl font-bold'>Page not found :)</h2>
+        <h2 className='text-3xl font-bold'>Page not found 🤨</h2>
         <p className='mt-10'>
           You are in a place that does not exist in the internet (yet)
         </p>
