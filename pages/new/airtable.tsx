@@ -1,5 +1,11 @@
-const Airtable = () => {
-  return <div>Airtable</div>;
+const Sheets = () => {
+  return (
+    <div>
+      <h1 className='p-10 text-4xl font-extrabold'>
+        Airtable integration coming really soon
+      </h1>
+    </div>
+  );
 };
 
-export default Airtable;
+export default Sheets;

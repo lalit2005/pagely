@@ -82,7 +82,7 @@ const Dashboard = () => {
             <div className='sticky top-0 flex-1 hidden mt-10 lg:block'>
               <div className='text-center transition-all bg-blue-100 border border-blue-300 rounded shadow-sm hover:bg-blue-200'>
                 <Link href='/new'>
-                  <a className='block px-4 py-3 text-lg'>
+                  <a className='block px-4 py-3 text-lg -mt-[50px]'>
                     <HiOutlinePlusCircle className='relative inline-block w-8 h-8 mr-1 text-gray-600 bottom-[2px]' />
                     Create new website
                   </a>

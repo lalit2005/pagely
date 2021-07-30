@@ -126,7 +126,7 @@ const GitHub = () => {
             </label>
             <label className='block mt-10'>
               <span className='text-gray-700'>Repository URL</span>
-              <InfoPopover content='This repo should contain a pagely.json file. It will be used to generate the website. Learn more about the schema at https://pagely.site/guides/github'>
+              <InfoPopover content='This repo should contain a pagely.json file. It will be used to generate the website. Learn more about the schema at https://guides.pagely.site'>
                 <Image
                   placeholder='blur'
                   src={GitHubUrlImage}

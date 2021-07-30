@@ -19,7 +19,7 @@ export default function Navbar() {
               <Link href='/showcase'>Showcase</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
-              <Link href='/guides'>Guides</Link>
+              <Link href='https://guides.pagely.site'>Guides</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
               <Link href='/templates'>Templates</Link>
