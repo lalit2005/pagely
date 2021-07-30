@@ -3,9 +3,11 @@ import Image from 'next/image';
 import Elon from '@/public/elon.jpg';
 import Skeleton from 'react-loading-skeleton';
 import { useState } from 'react';
+import { useUser } from '@clerk/clerk-react';
 
 const TwitterPreview: React.FC<{ data: notionSites }> = ({ data }) => {
   const [isImageLoading, setIsImageLoading] = useState<boolean>(true);
+  const { firstName, primaryEmailAddress } = useUser();
   return (
     <div>
       <div className='w-full max-w-xl px-5 py-3 border border-gray-300 rounded-2xl'>
@@ -43,7 +45,10 @@ const TwitterPreview: React.FC<{ data: notionSites }> = ({ data }) => {
           </div>
         </div>
         <div className='py-3'>
-          <p className='text-lg'>Preview of your site in Twitter 🤯</p>
+          <p className='text-lg'>
+            Check this website out. Made by{' '}
+            {firstName || primaryEmailAddress.emailAddress.split('@')[0]}
+          </p>
           <p className='text-lg text-twitter-blue'>
             https://{data?.subdomain}.pagely.site
           </p>
