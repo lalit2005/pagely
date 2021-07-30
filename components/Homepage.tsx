@@ -39,17 +39,11 @@ export default function Page() {
               <span className='relative inline-block mx-1 top-1'>
                 <SiGithub />
               </span>
-              <span className='font-medium text-gray-700'>GitHub</span>,{' '}
+              <span className='font-medium text-gray-700'>GitHub</span>or{' '}
               <span className='relative inline-block mx-1 top-1'>
                 <SiAirtable />
               </span>{' '}
               <span className='font-medium text-gray-700'>Airtable</span> or
-              <br />
-              just by chatting with a{' '}
-              <span className='relative inline-block mx-1 top-1'>
-                <FaRobot />
-              </span>
-              <span className='font-medium text-gray-700'>robot</span>
             </h2>
           </div>
         </div>
