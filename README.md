@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://user-images.githubusercontent.com/69138026/127688763-0ac2fdb2-3f77-4de5-bacd-f56b3d600f31.png)
+# Pagely
+## Build blazing fast websites with Notion in light speed ⚡️
 
-## Getting Started
+Launch SEO friendly, blazing fast websites from Notion,Google Sheets, GitHub,  Airtable with Pagely
 
-First, run the development server:
+## What's Pagely
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Pagely is a no-code platform that helps you launch websites from your favourite apps such as Notion, GitHub, Google Sheets, Airtable and more 🤯. Instead of letting you handle all the SEO stuff, Pagely automatically makes it SEO friendly for you. Don't like the default styles of Notion? No worries, you can edit the CSS till your heart's content. And one of my most favourite features - custom subdomains. Pagely lets you choose your subdomain of choice Eg. lalit.pagely.site, your-name.pagely.site, etc... Yeah, you got it right - Hashnode does that too. All you need to do is type out the content of your website in Notion and your website gets updated live, in real-time!!. You can make a website for your open source project on GitHub just by adding a `pagely.json` too!!. . There are a ton more features in Pagely.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Free custom subdomains (eg. your-name.pagely.site)
+2. **Live updating** website
+3. Automatic OG Image generation ( **not with puppeteer** 🤯  read more to find out)
+4. Custom styling ( with CSS )
+5. Custom `<head>` tags ( for analytics and infinite more integrations )
+6. **Showcase** your websites in the [showcase page](https://pagely.site/showcase)
+7. Blazing **fast** websites
+8. **Custom domains** ( via a workaround until [Vercel supports it](https://github.com/vercel/vercel/discussions/4840#discussioncomment-620716) )
+9. Detailed **guides** on how to integrate Pagely with various subpages
+10. Custom slugs/subpaths/subroutes/**pretty URLs** for Notion pages ( coming soon )
+11. **Password protection** for websites ( via inbuilt StaticShield integration 😜 )
+12. **Powerful integrations** such as Crisp.chat, Disqus, Google analytics, Stripe, Gumroad, etc..
+13. On Vercel .Your Pagely website is **cached on Vercel's edge network**
+14. **Automatic sitemaps** ( coming soon )
+15. Custom **fonts**, **favicons**, and more
+16. Automatic SSL ( **https** )
+17. Create awesome websites from your **mobile phone** 🤯
+18. **Full text search** for whole website ( coming soon )
+19. **Syntax highlighting** for code blocks
+20. **Dark mode** for all websites ( coming by tomorrow )
+21. Live twitter preview of your website
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Soem handy links
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Live website → https://pagely.site
+- GitHub repo → https://github.com/lalit2005/pagely
+- Showcase → https://pagely.site/showcase
+- Guides → https://guides.pagely.site
+- Example site with Notion → https://lalit.pagely.site
+- Example site with StaticShield → https://pagely-with-github.pagely.site/
 
-## Learn More
+## Tech Stack 📚
 
-To learn more about Next.js, take a look at the following resources:
+This is one of the most surprising part of the blog. That's because Pagely is completely built with the Jamstack. Yeah, you heard me right. The whole app was made with Next.js (except for the automatic OG image generation service )
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-  Next.js - The most amazing React framework on the planet
+- Clerk - Authentication
+- TailwindCSS - Styling
+- Radix UI - Primitive react component library
+- Headless UI - UI component library
+- Supabase (Postgres) - Database
+- Prisma - Database ORM
+- Axios - API requests
+- React Hook Form - Form validation
+- Zod - Validation
+- Web3forms - Form submissions
+- SWR - Remote data fetching
+- Typescript - Type checking
+- Vercel - Hosting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+You can contribute by submitting templates too!! For more details visit https://pagely.site/templates
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Clone this repo → `git clone https://github.com/Lalit2005/pagely`
+- Set up Clerk's environment variables from Clerk's dashboard
+- Spin up a free Postgres database in Supabase and get the connection URL/string
+- Get your API key from Imgbb [here](https://imgbb.com/) (Only if you are contributing to the Image-uploading section)
+- Install the dependencies → `yarn`
+- Run the app on localhost → `yarn dev`
