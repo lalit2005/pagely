@@ -56,7 +56,10 @@ const Page = () => {
                   <span className={checked ? 'opacity-100' : 'opacity-0'}>
                     <SiAirtable className='relative inline-block mr-3 bottom-px' />{' '}
                   </span>
-                  Airtable
+                  Airtable{' '}
+                  <span className='inline-block px-1 py-px mx-2 text-xs text-green-700 uppercase bg-green-200 border border-green-800 rounded-full'>
+                    Coming soon
+                  </span>
                 </span>
               )}
             </RadioGroup.Option>
@@ -68,7 +71,10 @@ const Page = () => {
                   <span className={checked ? 'opacity-100' : 'opacity-0'}>
                     <SiGooglesheets className='relative inline-block mr-3 bottom-px' />{' '}
                   </span>
-                  Google Sheets
+                  Google Sheets{' '}
+                  <span className='inline-block px-1 py-px mx-2 text-xs text-green-700 uppercase bg-green-200 border border-green-800 rounded-full'>
+                    Coming soon
+                  </span>
                 </span>
               )}
             </RadioGroup.Option>
