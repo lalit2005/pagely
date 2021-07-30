@@ -107,7 +107,7 @@ const handleIndexRoute: GetServerSideProps = async ({ req, res }) => {
           };
         }
       }
-    } else if (new URL('https://' + reqUrl).host === 'pagely.site') {
+    } else if (new URL('https://' + reqUrl).host === 'www.pagely.site') {
       return {
         props: {
           homepage: true,
