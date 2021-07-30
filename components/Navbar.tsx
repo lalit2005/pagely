@@ -19,13 +19,13 @@ export default function Navbar() {
               <Link href='/showcase'>Showcase</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
-              <Link href='#'>Guides</Link>
+              <Link href='/guides'>Guides</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
-              <Link href='#'>Templates</Link>
+              <Link href='/templates'>Templates</Link>
             </li>
             <li className='mx-3 text-gray-700 hover:text-gray-900'>
-              <Link href='#'>Support</Link>
+              <Link href='/support'>Support</Link>
             </li>
           </ul>
         </div>
