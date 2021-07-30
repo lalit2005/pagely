@@ -155,11 +155,11 @@
   justify-content: center;
 }
 
-.notion-table-row {
+/* .notion-table-row {
   height: 33px;
   align-items: center;
   overflow-y: auto;
-}
+} */
 
 .notion-collection-row-value {
   padding: 0 !important;
