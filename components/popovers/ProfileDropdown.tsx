@@ -59,14 +59,14 @@ const ProfileDropdown = ({
               </DropdownMenu.Group>
               <DropdownMenu.Group>
                 <li className='focus:bg-blue-100 hover:bg-blue-100'>
-                  <Link href='#'>
+                  <Link href='/support'>
                     <a className='block px-5 py-2'>Support</a>
                   </Link>
                 </li>
               </DropdownMenu.Group>
               <DropdownMenu.Group>
                 <li className='focus:bg-blue-100 hover:bg-blue-100'>
-                  <Link href='#'>
+                  <Link href='/templates'>
                     <a className='block px-5 py-2'>Templates</a>
                   </Link>
                 </li>
