@@ -48,7 +48,9 @@ export default function Page({ sites }) {
           })}
           <div>
             <a
-              href={'https://pagely.site'}
+              href={
+                'https://guides.pagely.site/a1e56c779b61400b818bb572652ca2ce'
+              }
               target='_blank'
               rel='noopener noreferrer'>
               <div className='max-w-sm px-3 mx-auto my-3 text-center transition-all duration-500 rounded-lg py-7 hover:border border-bluegray-200 hover:shadow-lg group'>
