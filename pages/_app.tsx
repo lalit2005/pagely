@@ -86,6 +86,13 @@ const MyApp = ({ Component, pageProps }) => {
       navigate={(to) => router.push(to)}>
       {privatePages.includes(router.pathname) ? (
         <>
+          <Script
+            async
+            defer
+            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
+            strategy='afterInteractive'
+            src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
+          />
           <Head>
             <link rel='preconnect' href='https://fonts.googleapis.com' />
             <link
@@ -107,14 +114,14 @@ const MyApp = ({ Component, pageProps }) => {
         </>
       ) : (
         <>
+          <Script
+            async
+            defer
+            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
+            strategy='afterInteractive'
+            src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
+          />
           <Head>
-            <Script
-              async
-              defer
-              data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
-              strategy='afterInteractive'
-              src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
-            />
             <link rel='preconnect' href='https://fonts.googleapis.com' />
             <link
               rel='preconnect'
