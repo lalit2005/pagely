@@ -90,6 +90,16 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <div className='my-10'>
+          <a
+            href='https://lalit2005.hashnode.dev/pagely'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <p className='text-4xl font-bold text-center text-blue-700 transition-all hover:text-blue-500 hover:underline'>
+              Made by Lalit
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   );
