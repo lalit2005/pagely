@@ -7,6 +7,7 @@ import {
 } from '@clerk/clerk-react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Script from 'next/script';
 
 // global styles shared across the entire site
 import '../styles/globals.css';
@@ -107,6 +108,13 @@ const MyApp = ({ Component, pageProps }) => {
       ) : (
         <>
           <Head>
+            <Script
+              async
+              defer
+              data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_ID}
+              strategy='afterInteractive'
+              src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
+            />
             <link rel='preconnect' href='https://fonts.googleapis.com' />
             <link
               rel='preconnect'
