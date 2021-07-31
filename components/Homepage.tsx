@@ -39,11 +39,11 @@ export default function Page() {
               <span className='relative inline-block mx-1 top-1'>
                 <SiGithub />
               </span>
-              <span className='font-medium text-gray-700'>GitHub</span>or{' '}
+              <span className='font-medium text-gray-700'>GitHub </span>or{' '}
               <span className='relative inline-block mx-1 top-1'>
                 <SiAirtable />
               </span>{' '}
-              <span className='font-medium text-gray-700'>Airtable</span> or
+              <span className='font-medium text-gray-700'>Airtable</span>
             </h2>
           </div>
         </div>
