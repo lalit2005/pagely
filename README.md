@@ -70,3 +70,10 @@ You can contribute by submitting templates too!! For more details visit https://
 - Get your API key from Imgbb [here](https://imgbb.com/) (Only if you are contributing to the Image-uploading section)
 - Install the dependencies → `yarn`
 - Run the app on localhost → `yarn dev`
+
+## Support Me ☕️
+
+If you would like to support me, you can by me a coffee here 👇
+
+
+<a href="https://www.buymeacoffee.com/lalitcodes" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
