@@ -43,7 +43,7 @@ export default function Page() {
           url: 'https://www.pagely.site',
           images: [
             {
-              url: 'https://pagely.site/ogimage.png',
+              url: 'https://www.pagely.site/ogimage.png',
               alt: 'Launch SEO friendly, blazing fast websites from Notion, Google Sheets, GitHub, Airtable with Pagely',
             },
           ],
