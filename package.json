@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^1.16.0",
-    "@clerk/clerk-sdk-node": "^0.5.0",
+    "@clerk/clerk-sdk-node": "^0.5.1",
     "@headlessui/react": "^1.4.0",
     "@hookform/resolvers": "^2.7.0",
     "@prisma/client": "2.28.0",
