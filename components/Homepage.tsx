@@ -9,6 +9,8 @@ import { AiOutlineThunderbolt } from 'react-icons/ai';
 import { SignedIn } from '@clerk/clerk-react';
 
 import RedirectIfUser from '@/components/RedirectIfUser';
+import Script from 'next/script';
+import Head from 'next/head';
 
 export default function Page() {
   return (
@@ -17,6 +19,20 @@ export default function Page() {
       <SignedIn>
         <RedirectIfUser />
       </SignedIn>
+      <Head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          data-name='BMC-Widget'
+          data-cfasync='false'
+          src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
+          data-id='lalitcodes'
+          data-description='Support me on Buy me a coffee!'
+          data-message="If you like my app, please consider buying me a coffee ☕️If you cannot, it's fine 🤗. Hope you enjoy my app"
+          data-color='#5F7FFF'
+          data-position='Right'
+          data-x_margin='18'
+          data-y_margin='18'></script>
+      </Head>
       <div className='mx-10'>
         <div className='max-w-5xl mx-auto mt-24'>
           <div className='text-center'>
