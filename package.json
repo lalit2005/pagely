@@ -35,7 +35,6 @@
     "notion-utils": "^4.7.9",
     "parse-github-url": "^1.0.2",
     "react": "^17.0.2",
-    "react-ace": "^9.4.1",
     "react-colorful": "^5.3.0",
     "react-dom": "^17.0.2",
     "react-dropzone": "^11.3.4",
