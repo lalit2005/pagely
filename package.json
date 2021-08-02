@@ -59,7 +59,7 @@
     "@types/react": "^17.0.15",
     "@types/react-textarea-autosize": "^4.3.6",
     "autoprefixer": "^10.3.1",
-    "eslint": "^7.31.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "^11.0.1",
     "postcss": "^8.3.6",
     "prisma": "2.27.0",
