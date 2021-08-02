@@ -37,10 +37,10 @@ export default function Page() {
       <NextSeo
         title='Pagely'
         description='Launch SEO friendly, blazing fast websites from Notion, Google Sheets, GitHub, Airtable with Pagely"'
-        canonical='https://www.pagely.site'
+        canonical='https://www.pagely.site/'
         openGraph={{
           title: 'Pagely',
-          url: 'https://www.pagely.site',
+          url: 'https://www.pagely.site/',
           images: [
             {
               url: 'https://www.pagely.site/ogimage.png',
@@ -52,6 +52,7 @@ export default function Page() {
         }}
         twitter={{
           cardType: 'summary_large_image',
+          handle: '@lalitcodes',
         }}
       />
       <div className='mx-10'>
