@@ -31,7 +31,7 @@
     "lodash.truncate": "^4.4.2",
     "next": "^11.0.1",
     "next-seo": "^4.26.0",
-    "notion-client": "^4.7.9",
+    "notion-client": "^4.8.2",
     "notion-utils": "^4.7.9",
     "parse-github-url": "^1.0.2",
     "react": "^17.0.2",
