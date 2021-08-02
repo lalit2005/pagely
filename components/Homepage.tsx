@@ -11,6 +11,7 @@ import { SignedIn } from '@clerk/clerk-react';
 import RedirectIfUser from '@/components/RedirectIfUser';
 import Script from 'next/script';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 export default function Page() {
   return (
@@ -33,6 +34,26 @@ export default function Page() {
           data-x_margin='18'
           data-y_margin='18'></script>
       </Head>
+      <NextSeo
+        title='Pagely'
+        description='Launch SEO friendly, blazing fast websites from Notion, Google Sheets, GitHub, Airtable with Pagely"'
+        canonical='https://www.pagely.site'
+        openGraph={{
+          title: 'Pagely',
+          url: 'https://www.pagely.site',
+          images: [
+            {
+              url: 'https://pagely.site/ogimage.png',
+              alt: 'Launch SEO friendly, blazing fast websites from Notion, Google Sheets, GitHub, Airtable with Pagely',
+            },
+          ],
+          description:
+            'Launch SEO friendly, blazing fast websites from Notion,Google Sheets, GitHub, Airtable with Pagely',
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <div className='mx-10'>
         <div className='max-w-5xl mx-auto mt-24'>
           <div className='text-center'>
