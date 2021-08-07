@@ -39,7 +39,7 @@ Pagely is a no-code platform that helps you launch websites from your favourite 
 - Showcase → https://pagely.site/showcase
 - Guides → https://guides.pagely.site
 - Example site with Notion → https://lalit.pagely.site
-- Example site with StaticShield → https://pagely-with-github.pagely.site/
+- Example site with GitHub → https://pagely-with-github.pagely.site/
 
 ## Tech Stack 📚
 
