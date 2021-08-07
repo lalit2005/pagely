@@ -9,6 +9,7 @@ import ProfileDropdown from '@/components/popovers/ProfileDropdown';
 import DashboardNav from '@/components/dashboard/DashboardNav';
 import { Toaster } from 'react-hot-toast';
 import Head from 'next/head';
+import { GoInbox } from 'react-icons/go';
 
 const SidebarLayout: React.FC<{
   activeTab: 'code' | 'setup' | 'settings';
@@ -55,7 +56,15 @@ const SidebarLayout: React.FC<{
               <li
                 className={`my-2 rounded ${
                   activeTab === 'setup' ? ' bg-gray-200' : ' hover:bg-gray-300'
-                }`}></li>
+                }`}>
+                <Link href={`/github-site/${data?.id}`}>
+                  <a className='block px-3 py-2 my-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-700'>
+                    {' '}
+                    <GoInbox className='relative inline-block bottom-[2px]' />{' '}
+                    Setup
+                  </a>
+                </Link>
+              </li>
               <li
                 className={`my-2 rounded ${
                   activeTab === 'code' ? ' bg-gray-200' : ' hover:bg-gray-300'
