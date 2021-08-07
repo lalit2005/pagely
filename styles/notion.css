@@ -165,6 +165,11 @@
   padding: 0 !important;
 }
 
+code[class*='language-'],
+pre[class*='language-'] {
+  text-shadow: none !important;
+}
+
 .notion-collection {
   align-self: center !important;
 }
