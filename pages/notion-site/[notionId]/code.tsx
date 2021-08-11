@@ -56,6 +56,7 @@ const Page = () => {
               className='px-2 py-1 text-green-600 border border-green-500 rounded shadow bg-green-50 hover:bg-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-200'>
               Open styling tools
             </button>
+            <p className='my-1 text-sm text-gray-500'>PROTIP: Use the <a className="underline" href='https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha'>`Stylebot`</a> extension to style your website without code. View demo at <a className="underline" href={process.env.NEXT_PUBLIC_LOOM_VIDEO_URL}>here</a>.</p>
           </div>
           <div className='mt-8'>
             <p className='my-3 font-mono text-xl font-bold text-gray-500'>{`<style>`}</p>
