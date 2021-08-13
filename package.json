@@ -24,7 +24,7 @@
     "@radix-ui/react-popover": "^0.0.19",
     "@radix-ui/react-slider": "^0.0.17",
     "@radix-ui/react-tabs": "^0.0.16",
-    "@radix-ui/react-tooltip": "^0.0.20",
+    "@radix-ui/react-tooltip": "^0.0.21",
     "@tailwindcss/forms": "^0.3.3",
     "ace-builds": "^1.4.12",
     "axios": "^0.21.1",
