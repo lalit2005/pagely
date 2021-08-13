@@ -29,7 +29,7 @@
     "ace-builds": "^1.4.12",
     "axios": "^0.21.1",
     "lodash.truncate": "^4.4.2",
-    "next": "^11.0.1",
+    "next": "^11.1.0",
     "next-seo": "^4.26.0",
     "notion-client": "^4.8.2",
     "notion-utils": "^4.7.9",
