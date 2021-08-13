@@ -70,6 +70,17 @@ You can contribute by submitting templates too!! For more details visit https://
 - Get your API key from Imgbb [here](https://imgbb.com/) (Only if you are contributing to the Image-uploading section)
 - Install the dependencies → `yarn`
 - Run the app on localhost → `yarn dev`
+- Create a new branch
+- Once finishing a new feature or fixing a bug, just open a PR :)
+
+> Remember to use **conventional commits**. 
+> - **fix: \<a bug\>** for a bug fix
+> - **feat: \<a new feature\>** for a new feature
+> - **refactor: \<a code refactor\>** for a code refactor
+> - **chore: \<bump lodash\>** anything related to build step
+> - **chore(deps): \<bump lodash\>** for a dependency update
+> - **chore(deps-dev): \<bump vercel\>** for a dev-dependency update
+> - **style: \<add margin\>** for anything related to styling of the application
 
 ## Support Me ☕️
 
