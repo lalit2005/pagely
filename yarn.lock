@@ -491,6 +491,15 @@
     "@radix-ui/react-compose-refs" "0.0.5"
     "@radix-ui/react-slot" "0.0.12"
 
+"@radix-ui/react-collection@0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-collection/-/react-collection-0.0.15.tgz#1b2ef5d5c0361ad28fd168917e567e4d0f845c43"
+  integrity sha512-h82YPqKxIfrXpd8WJCdfgl1c8u2kj+Mr9syNwjcYcXv6DulkT8op771q0ry3+CcL/4cOOyR4ULdfuvMODTsUeg==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/react-compose-refs" "0.0.5"
+    "@radix-ui/react-slot" "0.0.12"
+
 "@radix-ui/react-compose-refs@0.0.5":
   version "0.0.5"
   resolved "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-0.0.5.tgz"
@@ -718,6 +727,22 @@
     "@radix-ui/react-use-callback-ref" "0.0.5"
     "@radix-ui/react-use-controllable-state" "0.0.6"
 
+"@radix-ui/react-roving-focus@0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-roving-focus/-/react-roving-focus-0.0.16.tgz#79c7ee71cf9a3c7d55eefa562189c8de80252066"
+  integrity sha512-9kYHWfxMM7RreNiT8kxS/ivv077Nc9N3od8slJpBvfNuybLxLlHB0QdWbwaceM6hBm2MmRdfL5VlUndDRE9S7g==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "0.0.5"
+    "@radix-ui/react-collection" "0.0.15"
+    "@radix-ui/react-compose-refs" "0.0.5"
+    "@radix-ui/react-context" "0.0.5"
+    "@radix-ui/react-id" "0.0.6"
+    "@radix-ui/react-polymorphic" "0.0.13"
+    "@radix-ui/react-primitive" "0.0.15"
+    "@radix-ui/react-use-callback-ref" "0.0.5"
+    "@radix-ui/react-use-controllable-state" "0.0.6"
+
 "@radix-ui/react-slider@^0.0.16":
   version "0.0.16"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-slider/-/react-slider-0.0.16.tgz#014fe1a054e058781e180544a79a37050e07eb8d"
@@ -744,18 +769,18 @@
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-compose-refs" "0.0.5"
 
-"@radix-ui/react-tabs@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-tabs/-/react-tabs-0.0.15.tgz#2559791e4faaae922cd4422246b93c96c582d93c"
-  integrity sha512-r3UL0QvZwp5ThljisjVyZpxJehzS1Jmt4VBa/4eR42swLFwez3qqeKLD/6XkNfe+GfF+NopPUrPaRZCJrpRNGA==
+"@radix-ui/react-tabs@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-tabs/-/react-tabs-0.0.16.tgz#e9c2ca83f5d0cc457a8c1819d430ba867bec1949"
+  integrity sha512-cE9O6PRH9sIB8CFql+iew0yO/w6ayYCaCxsT/NVWo080c2USfdaBwvSkIFNT01LAmBijCgkQ0gJAO6groWuz3w==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@radix-ui/primitive" "0.0.5"
     "@radix-ui/react-context" "0.0.5"
     "@radix-ui/react-id" "0.0.6"
-    "@radix-ui/react-polymorphic" "0.0.12"
-    "@radix-ui/react-primitive" "0.0.14"
-    "@radix-ui/react-roving-focus" "0.0.15"
+    "@radix-ui/react-polymorphic" "0.0.13"
+    "@radix-ui/react-primitive" "0.0.15"
+    "@radix-ui/react-roving-focus" "0.0.16"
     "@radix-ui/react-use-callback-ref" "0.0.5"
     "@radix-ui/react-use-controllable-state" "0.0.6"
 
