@@ -48,7 +48,7 @@
     "react-textarea-autosize": "^8.3.3",
     "react-tweet-embed": "^1.2.2",
     "swr": "^0.5.6",
-    "zod": "^3.7.1"
+    "zod": "^3.7.2"
   },
   "devDependencies": {
     "@clerk/types": "^1.8.0",
