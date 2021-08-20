@@ -211,7 +211,7 @@ const Notion = () => {
                 />
               </InfoPopover>
               <p className='mt-1 text-sm text-gray-600'>
-                You will get the URL once you share your Notion page to web
+                <span className="font-bold">Make sure your Notion page is public</span>. You will get the URL once you share your page to web
               </p>
               <input
                 type='text'
