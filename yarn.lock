@@ -312,10 +312,10 @@
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.0.tgz#c6d424d8ab10ac925e4423d7f3cbab02c30d736a"
   integrity sha512-C+FmBVF6YGvqcEI5fa2dfVbEaXr2RGR6Kw1E5HXIISIZEfsrH/yuCgsjWw5nlRF9vbCxmQ/EKs64GAdKeb8gCw==
 
-"@hookform/devtools@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@hookform/devtools/-/devtools-3.1.0.tgz#ba2dc7a627f53535db8d0ff7e65f7a00db815cf5"
-  integrity sha512-LCMOw8IrytV9z8nq5zwsM6056HXY0jwqZJjAOyh+GnCS7VUWKxMzYyC0ruvE76/Rs/wlVQB9EDuvgw6ZoyVEow==
+"@hookform/devtools@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@hookform/devtools/-/devtools-4.0.0.tgz#66600809014166ba5599d45cead1cd3ae0a65008"
+  integrity sha512-lRjeQyNSuh/Mf/CCpP8z/t6Z9s5QSft6Sieu3EcPMF9PP/ZO3+m8OCpP2GoL15PipPJp/lARba2C6S/2Wk86mA==
   dependencies:
     "@emotion/react" "^11.1.5"
     "@emotion/styled" "^11.3.0"
@@ -4611,10 +4611,10 @@ react-hook-form@^7.13.0:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.13.0.tgz#af451e4771af2ddcb4ccb2f6a11eeb191c66bbdc"
   integrity sha512-ofjzl78xNTRmBHFZ/gOn65HDiqM/LHxbVMlaFoemyMQIDFTR4aG4h2CpCG/N0TbW5IQbh21hBYUvvmqK0ByEhg==
 
-react-hot-toast@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.1.0.tgz#f4fe3107a3ccd1d7e76ad3d3282967fbf2fccf2c"
-  integrity sha512-/wUoUVUC/qCYmkJvMzl/oXBIJe47vYqtwOpA76Pz8SrklrF8RBUTLG2eS+ivznzQzY8YlsyODIV7Qk3vOnFf1g==
+react-hot-toast@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.1.1.tgz#56409ab406b534e9e58274cf98d80355ba0fdda0"
+  integrity sha512-Odrp4wue0fHh0pOfZt5H+9nWCMtqs3wdlFSzZPp7qsxfzmbE26QmGWIh6hG43CukiPeOjA8WQhBJU8JwtWvWbQ==
   dependencies:
     goober "^2.0.35"
 
@@ -4690,10 +4690,10 @@ react-modal@^3.11.2:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-notion-x@^4.8.5:
-  version "4.8.5"
-  resolved "https://registry.yarnpkg.com/react-notion-x/-/react-notion-x-4.8.5.tgz#eb64b6c2c50020a7e185c20843c76719dc30250d"
-  integrity sha512-gHqgSx1Bq2JJQf9BseEi/vtWgWCL5mw6c8UtRKsWEEwCJOUOVX/e/eBTpK5Zhf63flN6/c11VByh7prCqnzCSA==
+react-notion-x@^4.8.6:
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/react-notion-x/-/react-notion-x-4.8.6.tgz#5a74582724d87a5d56c743ab9f41afcbd1289ee8"
+  integrity sha512-ZQBZU9fJyLsplhELWnI3iNQxOMYp99IS05x2ICrta7gVfwjZDgvN+Vv8hH5tuT4Hf+aozlE4NClL0leigJARKw==
   dependencies:
     "@matejmazur/react-katex" "^3.1.3"
     date-fns "^2.15.0"
@@ -4703,7 +4703,7 @@ react-notion-x@^4.8.5:
     lodash.throttle "^4.1.1"
     medium-zoom "^1.0.6"
     notion-types "^4.8.2"
-    notion-utils "^4.8.2"
+    notion-utils "^4.8.6"
     prismjs "^1.20.0"
     rc-dropdown "^3.1.2"
     rc-menu "^8.5.2"
@@ -5704,10 +5704,10 @@ typescript@4.3.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.4.tgz#3f85b986945bcf31071decdd96cf8bfa65f9dcbc"
   integrity sha512-uauPG7XZn9F/mo+7MrsRjyvbxFpzemRjKEZXS4AK83oP2KKOJPvb+9cO/gmnv8arWZvhnjVOXz7B49m1l0e9Ew==
 
-typescript@^4.3.5:
-  version "4.3.5"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-4.3.5.tgz"
-  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
+typescript@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
