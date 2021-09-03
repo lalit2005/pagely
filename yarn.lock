@@ -3935,7 +3935,7 @@ notion-types@^4.8.2:
   resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.8.2.tgz#b7b1182a595f1a526c3617578874667cdf7e52fe"
   integrity sha512-WfmEv/3hgHkXtmmAL2rlS9i7MAdc2pIJZGoeqi8GnBK58XMW6zgkNFjrUBXJtaDiOjQ6nfVE/yepTj79LGhERw==
 
-notion-utils@^4.7.9, notion-utils@^4.8.2, notion-utils@^4.8.6:
+notion-utils@^4.7.9, notion-utils@^4.8.6:
   version "4.8.6"
   resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.8.6.tgz#cc10b3b5b6d7c54686404880a9008babbbe76651"
   integrity sha512-FM//qr5la71mnU1Sw5elfKbcbsBtDNi8wdtBeFGVXCLm0UYpNEAqfSAgf35EfuJ3AeMghCC8ge5ML+9bBpceUQ==
@@ -4606,10 +4606,10 @@ react-dropzone@^11.3.4:
     file-selector "^0.2.2"
     prop-types "^15.7.2"
 
-react-hook-form@^7.13.0:
-  version "7.13.0"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.13.0.tgz#af451e4771af2ddcb4ccb2f6a11eeb191c66bbdc"
-  integrity sha512-ofjzl78xNTRmBHFZ/gOn65HDiqM/LHxbVMlaFoemyMQIDFTR4aG4h2CpCG/N0TbW5IQbh21hBYUvvmqK0ByEhg==
+react-hook-form@^7.14.2:
+  version "7.14.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.14.2.tgz#e5615ba883588a6dd73bbbbbd7d3bb71b73440e3"
+  integrity sha512-32uvgKkaE/0vOncfnJdwQhfahhocPpcb5c7F4j9Eq7dOnqS2Hg8h70Bmt6KXb6veLSWJultc1+ik9QSfqXFmLA==
 
 react-hot-toast@^2.1.1:
   version "2.1.1"
