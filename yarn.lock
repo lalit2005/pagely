@@ -3940,10 +3940,10 @@ notion-types@^4.8.2:
   resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.8.2.tgz#b7b1182a595f1a526c3617578874667cdf7e52fe"
   integrity sha512-WfmEv/3hgHkXtmmAL2rlS9i7MAdc2pIJZGoeqi8GnBK58XMW6zgkNFjrUBXJtaDiOjQ6nfVE/yepTj79LGhERw==
 
-notion-utils@^4.7.9, notion-utils@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.8.2.tgz#f6991a91596a0e4717f20a11f4f52cc3625c21ee"
-  integrity sha512-5IkeukBVIOpRODC06qT/19MJGG9HPN6T4wWDMaVl0pXogjN9gALnOSHsF8ljxgJQxX83OT2vAjD/rVNpU+uyaw==
+notion-utils@^4.8.2, notion-utils@^4.8.6:
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.8.6.tgz#cc10b3b5b6d7c54686404880a9008babbbe76651"
+  integrity sha512-FM//qr5la71mnU1Sw5elfKbcbsBtDNi8wdtBeFGVXCLm0UYpNEAqfSAgf35EfuJ3AeMghCC8ge5ML+9bBpceUQ==
   dependencies:
     notion-types "^4.8.2"
     p-queue "^6.6.1"
