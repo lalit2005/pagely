@@ -104,10 +104,15 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.9.0", "@clerk/types@^1.9.0":
+"@clerk/types@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.9.0.tgz#f22b0575ef7dfd5d186ca4b437b46807fd43cc8c"
   integrity sha512-izrlm8XlTW45tc/vuP6pGxwDRjberkpgnpmguTX1TocjKJMi2n0xgyEfpi0+qWgpAakq/AaEr847nFPFYuI9PQ==
+
+"@clerk/types@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.10.0.tgz#f3ab978a394ba55767356789cf5a3c46f255266f"
+  integrity sha512-EtXihdw5PL3lhPskQaHg9bSkmktmsg3uzCjDEdaTNdnvufG4oe5nGU0wYgG2Uc+wNagqzomcbIKy7SmJGZdv+g==
 
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
@@ -3935,7 +3940,7 @@ notion-types@^4.8.2:
   resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.8.2.tgz#b7b1182a595f1a526c3617578874667cdf7e52fe"
   integrity sha512-WfmEv/3hgHkXtmmAL2rlS9i7MAdc2pIJZGoeqi8GnBK58XMW6zgkNFjrUBXJtaDiOjQ6nfVE/yepTj79LGhERw==
 
-notion-utils@^4.7.9, notion-utils@^4.8.2, notion-utils@^4.8.6:
+notion-utils@^4.7.9, notion-utils@^4.8.6:
   version "4.8.6"
   resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.8.6.tgz#cc10b3b5b6d7c54686404880a9008babbbe76651"
   integrity sha512-FM//qr5la71mnU1Sw5elfKbcbsBtDNi8wdtBeFGVXCLm0UYpNEAqfSAgf35EfuJ3AeMghCC8ge5ML+9bBpceUQ==
