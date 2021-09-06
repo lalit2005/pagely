@@ -57,7 +57,7 @@
     "@types/prettier": "^2.3.2",
     "@types/react": "^17.0.19",
     "@types/react-textarea-autosize": "^4.3.6",
-    "autoprefixer": "^10.3.3",
+    "autoprefixer": "^10.3.4",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "postcss": "^8.3.6",
