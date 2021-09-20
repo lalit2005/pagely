@@ -55,7 +55,7 @@
     "@hookform/devtools": "^4.0.0",
     "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",
-    "@types/react": "^17.0.19",
+    "@types/react": "^17.0.21",
     "@types/react-textarea-autosize": "^4.3.6",
     "autoprefixer": "^10.3.3",
     "eslint": "^7.32.0",
