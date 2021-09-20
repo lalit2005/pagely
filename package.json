@@ -51,7 +51,7 @@
     "zod": "^3.8.1"
   },
   "devDependencies": {
-    "@clerk/types": "^1.9.0",
+    "@clerk/types": "^1.13.0",
     "@hookform/devtools": "^4.0.0",
     "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",

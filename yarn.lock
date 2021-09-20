@@ -107,10 +107,15 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.10.0", "@clerk/types@^1.9.0":
+"@clerk/types@1.10.0":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.10.0.tgz#f3ab978a394ba55767356789cf5a3c46f255266f"
   integrity sha512-EtXihdw5PL3lhPskQaHg9bSkmktmsg3uzCjDEdaTNdnvufG4oe5nGU0wYgG2Uc+wNagqzomcbIKy7SmJGZdv+g==
+
+"@clerk/types@^1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.13.0.tgz#b1293031bd5731b9a0a70ddc631cfdbceaa96981"
+  integrity sha512-Uem+s4W82saaZuPsxu2Ds0TIwsPThZbvXli3Lmxdb4c31eL5L7aw0ODYV+xKGe2bJOsUDgrHBQMJxcF7fK26Gg==
 
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
