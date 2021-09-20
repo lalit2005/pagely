@@ -85,12 +85,12 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@clerk/clerk-react@^1.18.0":
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-1.18.0.tgz#3f6afcb0968fa66698fa30322e2a30e88b055c3d"
-  integrity sha512-ZPN9l/zBQwVniKm8GkUp/wkKQBecTltAByNoJl8HUKkgXIngOP/pih42YsEAVGJbTkIvCEWj4ALKH+8w9+T0QA==
+"@clerk/clerk-react@^1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-1.21.0.tgz#fe8a608747315622c12f2921bd1ab8262a74703d"
+  integrity sha512-KBKwpX3bkIQTpYcsslv8taglV9AW0mvDT1cIqQyJ0k77RelYsLznsFbLzVoV30TBSDVxqP0Uw1iECkLiE6CUQA==
   dependencies:
-    "@clerk/types" "1.10.0"
+    "@clerk/types" "1.13.0"
 
 "@clerk/clerk-sdk-node@^0.5.2":
   version "0.5.2"
@@ -107,10 +107,10 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.10.0", "@clerk/types@^1.9.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.10.0.tgz#f3ab978a394ba55767356789cf5a3c46f255266f"
-  integrity sha512-EtXihdw5PL3lhPskQaHg9bSkmktmsg3uzCjDEdaTNdnvufG4oe5nGU0wYgG2Uc+wNagqzomcbIKy7SmJGZdv+g==
+"@clerk/types@1.13.0", "@clerk/types@^1.9.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.13.0.tgz#b1293031bd5731b9a0a70ddc631cfdbceaa96981"
+  integrity sha512-Uem+s4W82saaZuPsxu2Ds0TIwsPThZbvXli3Lmxdb4c31eL5L7aw0ODYV+xKGe2bJOsUDgrHBQMJxcF7fK26Gg==
 
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
