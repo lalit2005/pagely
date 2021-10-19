@@ -141,7 +141,7 @@ const Notion = () => {
                 />
               </InfoPopover>
               <p className='mt-1 text-sm text-gray-600'>
-                This name will be used for generating OG and Twitter description
+                This description will be used for generating OG and Twitter description
               </p>
               <textarea
                 className='block w-full mt-1 text-base border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50'
