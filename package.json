@@ -25,7 +25,7 @@
     "@radix-ui/react-slider": "^0.0.17",
     "@radix-ui/react-tabs": "^0.0.16",
     "@radix-ui/react-tooltip": "^0.1.1",
-    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/forms": "^0.3.4",
     "ace-builds": "^1.4.12",
     "axios": "^0.21.2",
     "lodash.truncate": "^4.4.2",
@@ -47,7 +47,7 @@
     "react-rough-notation": "^1.0.1",
     "react-textarea-autosize": "^8.3.3",
     "react-tweet-embed": "^1.2.2",
-    "swr": "^1.0.0",
+    "swr": "^1.0.1",
     "zod": "^3.11.4"
   },
   "devDependencies": {
@@ -62,8 +62,6 @@
     "eslint-config-next": "^11.1.2",
     "postcss": "^8.3.6",
     "prisma": "3.1.1",
-    "tailwindcss": "^2.2.9",
-    "typescript": "^4.3.5",
     "tailwindcss": "^2.2.9",
     "typescript": "^4.4.2",
     "vercel": "^23.1.2"
