@@ -26,7 +26,6 @@
     "@radix-ui/react-tabs": "^0.0.16",
     "@radix-ui/react-tooltip": "^0.1.1",
     "@tailwindcss/forms": "^0.3.4",
-    "ace-builds": "^1.4.12",
     "axios": "^0.21.2",
     "lodash.truncate": "^4.4.2",
     "next": "^11.1.2",
@@ -37,7 +36,7 @@
     "react": "^17.0.2",
     "react-colorful": "^5.4.0",
     "react-dom": "^17.0.2",
-    "react-dropzone": "^11.3.4",
+    "react-dropzone": "^11.4.2",
     "react-hook-form": "^7.16.1",
     "react-hot-toast": "^2.1.1",
     "react-icons": "^4.2.0",
@@ -51,7 +50,7 @@
     "zod": "^3.11.4"
   },
   "devDependencies": {
-    "@clerk/types": "^1.13.2",
+    "@clerk/types": "^1.15.0",
     "@hookform/devtools": "^4.0.1",
     "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",
