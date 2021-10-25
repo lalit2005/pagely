@@ -24,7 +24,7 @@
     "@radix-ui/react-popover": "^0.0.20",
     "@radix-ui/react-slider": "^0.0.17",
     "@radix-ui/react-tabs": "^0.0.16",
-    "@radix-ui/react-tooltip": "^0.0.21",
+    "@radix-ui/react-tooltip": "^0.1.1",
     "@tailwindcss/forms": "^0.3.3",
     "ace-builds": "^1.4.12",
     "axios": "^0.21.2",
@@ -49,13 +49,15 @@
     "react-tweet-embed": "^1.2.2",
     "swr": "^1.0.1",
     "zod": "^3.9.3"
+    "swr": "^1.0.1",
+    "zod": "^3.11.4"
   },
   "devDependencies": {
     "@clerk/types": "^1.13.2",
     "@hookform/devtools": "^4.0.1",
     "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",
-    "@types/react": "^17.0.24",
+    "@types/react": "^17.0.32",
     "@types/react-textarea-autosize": "^4.3.6",
     "autoprefixer": "^10.3.6",
     "eslint": "^7.32.0",
