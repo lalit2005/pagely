@@ -85,12 +85,12 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@clerk/clerk-react@^1.21.2":
-  version "1.21.2"
-  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-1.21.2.tgz#7376f52ec1c9e989c407cea6b76a75437fd77df5"
-  integrity sha512-aziV1B6dwJNZr1oS92siJTIPBZkmNMxsDzmj8BwRc6sYUPVV1YnvriuLn1zZNjJjq8h6e7xwlsjAl7AQ+LL3Zw==
+"@clerk/clerk-react@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@clerk/clerk-react/-/clerk-react-2.0.1.tgz#eb478749d205ccc564d925cda62c9a8ce8478fcc"
+  integrity sha512-VbXVg/taryZhsrOPn55lx4yU7v3Pz6YEmY3S4xpvHr9qTb9Lqp+HAI2JuaJtMqz4eXJXxxyeaV1dj3y6jeKKZQ==
   dependencies:
-    "@clerk/types" "1.13.1"
+    "@clerk/types" "1.15.0"
 
 "@clerk/clerk-sdk-node@^0.5.2":
   version "0.5.2"
@@ -107,15 +107,10 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.13.1.tgz#003fe0c0eae6443d38d049d38d1b1340f5f42357"
-  integrity sha512-hjkD7DouHZGVQGMPwRA4DJhqyL3vUYEnVB933HghtCGpxr7M+i9hemAP04WAuxj3hHNcRvXS7bpWC5jCrQzzSg==
-
-"@clerk/types@^1.13.2":
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.13.2.tgz#063602482b9e3134a08bfe4b1ea07c8f46d23dae"
-  integrity sha512-n9OeyvuINI5NSkZnw1fo8ti9BNDWiOLPAWcFHTScpDulpHbXpcGpxNJMbp0SgOrXItvbt4eQSR4Fqg7CQjAviw==
+"@clerk/types@1.15.0", "@clerk/types@^1.13.2":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.15.0.tgz#b4a0e5d5153d39e66f91c918a5c06409431396f4"
+  integrity sha512-/dydnc8pysjgpGqK+LhO4gl/gPKZ9LUDxm1iAYbhGa4Oj8RCqK6L7wN77ZOddHJrktmtUTsZIb6peIzcFMls3Q==
 
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
@@ -1086,7 +1081,7 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tailwindcss/forms@^0.3.3":
+"@tailwindcss/forms@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.3.4.tgz#e4939dc16450eccf4fd2029770096f38cbb556d4"
   integrity sha512-vlAoBifNJUkagB+PAdW4aHMe4pKmSLroH398UPgIogBFc91D2VlHUxe4pjxQhiJl0Nfw53sHSJSQBSTQBZP3vA==
@@ -4320,7 +4315,7 @@ notion-types@^4.10.0, notion-types@^4.8.2:
   resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.10.0.tgz#05c5006a021ab82f045c670e648a1749f2d1d9d1"
   integrity sha512-+vGbzPCdPzunn6W8U/ugKCv6dP52FXSBHlS4ZeOtm4YeHxeXtglBeUDjTSsUix8+/j+aennL/YxzeeFEB0m5pQ==
 
-notion-utils@^4.10.0, notion-utils@^4.7.9, notion-utils@^4.8.6:
+notion-utils@^4.10.0, notion-utils@^4.8.6:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.10.0.tgz#205049246a61c2968c8262327f9bae470b6092cd"
   integrity sha512-ZTEJbR+LDOD+VnHjTwSCHO8JB9Hu/Arf6dmBZK3IptZCfDTzoVUEoPMvuME6fkPWtijk6+Rj9sVXY09ZxmACQQ==
