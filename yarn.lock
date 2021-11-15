@@ -107,10 +107,15 @@
     lodash "^4.17.21"
     snakecase-keys "^3.2.1"
 
-"@clerk/types@1.15.0", "@clerk/types@^1.13.2":
+"@clerk/types@1.15.0":
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.15.0.tgz#b4a0e5d5153d39e66f91c918a5c06409431396f4"
   integrity sha512-/dydnc8pysjgpGqK+LhO4gl/gPKZ9LUDxm1iAYbhGa4Oj8RCqK6L7wN77ZOddHJrktmtUTsZIb6peIzcFMls3Q==
+
+"@clerk/types@^1.15.5":
+  version "1.15.5"
+  resolved "https://registry.yarnpkg.com/@clerk/types/-/types-1.15.5.tgz#06180848e67dde0368974d390f5cac3fb5f822e2"
+  integrity sha512-djuSOSHI3ZVgdsVCPvXT76yP860nSqOtFnO0+QXEpcb3ZAvWZuuPTXLfeOlimta+18TiyXD+u5/5OXQXpRgLXw==
 
 "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
@@ -1346,11 +1351,6 @@
   version "1.9.5"
   resolved "https://registry.npmjs.org/@xobotyi/scrollbar-width/-/scrollbar-width-1.9.5.tgz"
   integrity sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==
-
-ace-builds@^1.4.13:
-  version "1.4.13"
-  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.4.13.tgz#186f42d3849ebcc6a48b93088a058489897514c1"
-  integrity sha512-SOLzdaQkY6ecPKYRDDg+MY1WoGgXA34cIvYJNNoBMGGUswHmlauU2Hy0UL96vW0Fs/LgFbMUjD+6vqzWTldIYQ==
 
 acorn-jsx@^5.3.1:
   version "5.3.2"
