@@ -32,7 +32,7 @@ Pagely is a no-code platform that helps you launch websites from your favourite 
 20. **Dark mode** for all websites ( coming by tomorrow )
 21. Live twitter preview of your website
 
-## Soem handy links
+## Some handy links
 
 - Live website → https://pagely.site
 - GitHub repo → https://github.com/lalit2005/pagely
