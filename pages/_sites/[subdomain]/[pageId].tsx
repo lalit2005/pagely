@@ -9,7 +9,6 @@ import { useState, useEffect } from 'react';
 import useSwr from 'swr';
 
 function Page({
-  notFound,
   recordMap,
   customCss,
   customHead,
@@ -19,10 +18,6 @@ function Page({
   siteName,
   siteDesc,
 }) {
-  if (notFound) {
-    return <div>Hello</div>;
-  }
-
   const [pageData, setPageData] = useState(recordMap);
   let notionPageData = useSwr(
     `/api/getSiteData/notionPageData/?pageId=${pageId}&subdomain=${subdomain}`,
