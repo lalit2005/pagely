@@ -17,7 +17,8 @@ export default function middleware(req: NextRequest) {
   if (!pathname.includes('.') && !pathname.startsWith('/api')) {
     if (
       currentHost.startsWith('localhost:3000') ||
-      currentHost.startsWith(process.env.NEXT_PUBLIC_ROOT_URL)
+      currentHost.startsWith(process.env.NEXT_PUBLIC_ROOT_URL) ||
+      currentHost === 'www.pagely.site'
     ) {
       return NextResponse.next();
     }
