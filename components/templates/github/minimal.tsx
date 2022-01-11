@@ -142,14 +142,15 @@ const Minimal = ({
         </footer>
       </main>
       <style jsx>{`
-			section#feature {
-				max-width: 80rem;
-				margin-top: 10rem;
-			  margin-bottom: 10rem;
-				margin-left: auto;
-			  margin-right: auto;
-				border-radius: 10px;
-			`}</style>
+        section#feature {
+          max-width: 80rem;
+          margin-top: 10rem;
+          margin-bottom: 10rem;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 10px;
+        }
+      `}</style>
     </div>
   );
 };

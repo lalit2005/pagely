@@ -1,16 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { NotionAPI } from 'notion-client';
-import { GetServerSideProps } from 'next';
-import { parsePageId } from 'notion-utils';
-
-import prisma from '@/utils/prisma';
-import NotFoundPage from '@/components/NotFoundPage';
 import NotionSubPage from '@/components/notion/NotionSubPage';
-import { useEffect, useState } from 'react';
-import useSwr from 'swr';
 import swrFetcher from '@/lib/swrFetcher';
+import prisma from '@/utils/prisma';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { NotionAPI } from 'notion-client';
+import { parsePageId } from 'notion-utils';
+import { useState, useEffect } from 'react';
+import useSwr from 'swr';
 
-const Page = ({
+function Page({
   notFound,
   recordMap,
   customCss,
@@ -20,9 +18,9 @@ const Page = ({
   ogImageUrl,
   siteName,
   siteDesc,
-}) => {
+}) {
   if (notFound) {
-    return <NotFoundPage />;
+    return <div>Hello</div>;
   }
 
   const [pageData, setPageData] = useState(recordMap);
@@ -51,22 +49,20 @@ const Page = ({
       />
     </div>
   );
-};
+}
 
 export default Page;
 
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=900, stale-while-revalidate=59'
-  );
-
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
+    const subdomain = params.subdomain as string;
+    const pageId = params.pageId as string;
     const notion = new NotionAPI();
-    // console.log(req.url);
-    const recordMap = await notion.getPage(req.url.substr(0));
-
-    const subdomain = req.headers.host.split('.')[0];
+    const recordMap = await notion.getPage(pageId);
+    console.log({
+      subdomain,
+      pageId,
+    });
 
     const pageMetaData = await prisma.notionSites.findUnique({
       where: {
@@ -88,7 +84,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
         customHead: pageMetaData.customHead,
         siteName: pageMetaData.siteName,
         siteDesc: pageMetaData.siteDesc,
-        pageId: parsePageId(req.url.substr(0)),
+        pageId: parsePageId(pageId),
         subdomain: subdomain,
       },
     };
@@ -97,4 +93,11 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       notFound: true,
     };
   }
+};
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
 };
