@@ -5,7 +5,7 @@ export default function middleware(req: NextRequest) {
   const hostname = req.headers.get('host');
 
   const currentHost =
-    process.env.NODE_ENV === 'production' && process.env.VERCEL === '1'
+    process.env.NODE_ENV === 'production'
       ? hostname.replace(`.${process.env.NEXT_PUBLIC_ROOT_URL}`, '')
       : hostname.replace(`.localhost:3000`, '');
 
@@ -16,8 +16,8 @@ export default function middleware(req: NextRequest) {
 
   if (!pathname.includes('.') && !pathname.startsWith('/api')) {
     if (
-      currentHost == 'localhost:3000' ||
-      currentHost == process.env.NEXT_PUBLIC_ROOT_URL
+      currentHost.startsWith('localhost:3000') ||
+      currentHost.startsWith(process.env.NEXT_PUBLIC_ROOT_URL)
     ) {
       return NextResponse.next();
     }
