@@ -4,6 +4,10 @@ export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const hostname = req.headers.get('host');
 
+  if (pathname.includes('.') || pathname.startsWith('/api')) {
+    return NextResponse.next();
+  }
+
   const currentHost =
     process.env.NODE_ENV === 'production'
       ? hostname.replace(`.${process.env.NEXT_PUBLIC_ROOT_URL}`, '')
