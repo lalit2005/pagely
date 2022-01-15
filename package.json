@@ -17,6 +17,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^2.0.1",
     "@clerk/clerk-sdk-node": "^0.5.2",
+    "@clerk/nextjs": "^2.7.0",
     "@headlessui/react": "^1.4.1",
     "@hookform/resolvers": "^2.8.2",
     "@prisma/client": "3.1.1",
@@ -28,7 +29,7 @@
     "@tailwindcss/forms": "^0.3.4",
     "axios": "^0.21.2",
     "lodash.truncate": "^4.4.2",
-    "next": "^12.0.7",
+    "next": "^12.0.8",
     "next-seo": "^4.26.0",
     "notion-client": "^4.10.0",
     "notion-utils": "^4.10.0",
@@ -46,7 +47,7 @@
     "react-rough-notation": "^1.0.1",
     "react-textarea-autosize": "^8.3.3",
     "react-tweet-embed": "^1.2.2",
-    "swr": "^1.0.1",
+    "swr": "^1.1.0",
     "zod": "^3.11.4"
   },
   "devDependencies": {

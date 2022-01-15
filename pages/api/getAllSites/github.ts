@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { requireSession } from '@clerk/clerk-sdk-node';
+import { requireSession } from '@clerk/nextjs/api';
 import prisma from '@/utils/prisma';
 
 export default requireSession(

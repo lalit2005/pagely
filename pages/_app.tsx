@@ -4,10 +4,11 @@ import {
   RedirectToSignIn,
   SignedIn,
   SignedOut,
-} from '@clerk/clerk-react';
+} from '@clerk/nextjs';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Script from 'next/script';
+import { SWRConfig } from 'swr';
 
 // global styles shared across the entire site
 import '../styles/globals.css';
@@ -81,9 +82,7 @@ const MyApp = ({ Component, pageProps }) => {
    * Otherwise, use Clerk to require authentication.
    */
   return (
-    <ClerkProvider
-      frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}
-      navigate={(to) => router.push(to)}>
+    <ClerkProvider>
       {privatePages.includes(router.pathname) ? (
         <>
           {process.env.NODE_ENV === 'production' && (
@@ -108,7 +107,12 @@ const MyApp = ({ Component, pageProps }) => {
             />
           </Head>
           <SignedIn>
-            <Component {...pageProps} />
+            <SWRConfig
+              value={{
+                fetcher: (url) => fetch(url).then((res) => res.json()),
+              }}>
+              <Component {...pageProps} />
+            </SWRConfig>
           </SignedIn>
           <SignedOut>
             <RedirectToSignIn />
@@ -135,7 +139,12 @@ const MyApp = ({ Component, pageProps }) => {
               rel='stylesheet'
             />
           </Head>
-          <Component {...pageProps} />
+          <SWRConfig
+            value={{
+              fetcher: (url) => fetch(url).then((res) => res.json()),
+            }}>
+            <Component {...pageProps} />
+          </SWRConfig>
         </>
       )}
     </ClerkProvider>

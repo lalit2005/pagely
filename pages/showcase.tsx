@@ -33,6 +33,8 @@ export default function Page({ sites }) {
                       <img
                         src={ogImageUrl}
                         alt={siteName}
+                        width='80%'
+                        height={'auto'}
                         className='w-[80%] mx-auto mb-4 rounded-lg group-hover:scale-105 object-cover transform transition-all duration-500 border border-gray-300'
                       />
                     ) || (
