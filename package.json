@@ -15,8 +15,8 @@
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,md,html,yml,yaml}\""
   },
   "dependencies": {
-    "@clerk/clerk-react": "^2.0.1",
-    "@clerk/clerk-sdk-node": "^0.5.2",
+    "@clerk/clerk-react": "^2.7.0",
+    "@clerk/clerk-sdk-node": "^2.6.1",
     "@clerk/nextjs": "^2.7.0",
     "@headlessui/react": "^1.4.1",
     "@hookform/resolvers": "^2.8.2",
@@ -51,7 +51,7 @@
     "zod": "^3.11.4"
   },
   "devDependencies": {
-    "@clerk/types": "^1.13.2",
+    "@clerk/types": "^1.21.0",
     "@hookform/devtools": "^4.0.1",
     "@types/parse-github-url": "^1.0.0",
     "@types/prettier": "^2.3.2",
